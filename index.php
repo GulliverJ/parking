@@ -24,7 +24,9 @@
 		<script src="main.js"></script>
 </head>
 <body>
-	<h1>Orange Parking</h1>
+	<div class="header">
+		<h1>Orange Parking</h1>
+	</div>
 	<div id="map"></div>
 	<script>
 		var map = makeMap(document.getElementById('map'));		
@@ -45,6 +47,5 @@
 			});
 		}, 10000);
 	</script>
-	<p>This page should display an embedded Google map with pointers indicating parking bays, along with their data (whether it's legal to park there, whether it's a disabled parking space, how long the maximum stay is...)</p>
 </body>
 </html>
