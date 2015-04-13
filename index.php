@@ -1,5 +1,5 @@
 <?php
-	require 'connect.php';
+	require ('connect.php');
 	$bays = array();
 	$query = 'select bays.bay_id, lat, lng, occupied from bays inner join bay_data on bays.bay_id = bay_data.bay_id order by bays.bay_id';
 	$result = mysql_query($query);
