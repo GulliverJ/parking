@@ -30,8 +30,7 @@
 		<div class="divide">
 		</div>
 		<img src="img/parking_logo.png" class="parkinglogo">
-		<img src="img/parking_title.png" style="display: inline; float:left">
-		<input type="text" name="search" id="search" class="mainsearch" placeholder="Search for parking bays"></input>
+		<img src="img/parking_title.png" style="display: inline; float:left; margin-right: 8px">
 	</div>
 	<div id="map">
 	</div>
