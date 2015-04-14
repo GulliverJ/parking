@@ -13,10 +13,10 @@
 			$initial = false;
 			echo '{';
 			echo '"id": ' . $row[0] . ',';
-			echo '"occupied": ' . ($row[1] ? 'true' : 'false');// . ',';
-/*			echo '"nearest_unoccupied_bay": ' . $row[2] . ',';
-			echo '"max_stay": "' . $row[3] . '",';
-			echo '"start": "' . $row[4] . '",';
+			echo '"occupied": ' . ($row[1] ? 'true' : 'false'); . ',';
+			echo '"nearest_unoccupied_bay": ' . $row[2] . ',';
+			echo '"max_stay": "' . $row[3] . '"';
+			/*echo '"start": "' . $row[4] . '",';
 			echo '"end": "' . $row[5]; . '"';*/
 			echo '}';
 		}
