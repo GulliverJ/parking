@@ -28,7 +28,7 @@
 	<div class="sidebar">
 		<div class="header">
 			<a href="http://victokoh.cs.ucl.ac.uk"><img src="img/main-button.png" class="returnlink"></a>
-			<img src="img/parking_title.png" style="display: inline; margin-left: 152px;">
+			<img src="img/parking_title.png" style="display: inline; margin-left: 88px;">
 		</div>
 		<div class="searchdiv">
 			<input name="search" type="text" placeholder="To be replaced by Google API" class="mainsearch"></input>
