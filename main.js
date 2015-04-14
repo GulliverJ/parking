@@ -24,11 +24,8 @@ function makeMap(div) {
 			google.maps.event.addListener(marker, 'click', function() {
 				$.getJSON('dataloader.php?id=' + id, function(data) {
 					$.each(data, function(key, value) {
-						console.log(id);
-						console.log(value.occupied);
-						console.log(value.restricted);
-						document.getElementById("sensorid").innerHTML = "ID: " + id;
-						document.getElementById("occupied").innerHTML = 'Has been: ' + value.occupied;
+						document.getElementById("sensorid").innerHTML = id;
+						document.getElementById("occupied").innerHTML = (value.occupied) ? 'Occupied' : 'Available';
 						document.getElementById("duration").innerHTML = 'For: ' + value.duration + ' seconds - todo convert';
 						document.getElementById("max_stay").innerHTML = 'Time limit: ' + value.max_stay;
 						document.getElementById("remaining").innerHTML = 'Time remaining: ' + value.remaining;
