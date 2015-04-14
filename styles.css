@@ -101,6 +101,37 @@ a.apitext:hover {
   height: 58px;
 }
 
+.resultshead {
+  width: 400px;
+  height: 72px;
+  display: block;
+  position: fixed;
+}
+
+.resultsid {
+  width: 140px;
+  height: 100%;
+  float: left;
+  display: inline;
+}
+
+p.idlabel {
+  font-size: 12px;
+  color: #1b1b1b;
+}
+
+h4.idlabel {
+  font-size: 18px;
+  color: #444;
+}
+
+.resultsstatus {
+  width: 260px;
+  height: 100%;
+  float: left;
+  display: inline;
+}
+
 .footer {
   width: 400px;
   height: 30px;

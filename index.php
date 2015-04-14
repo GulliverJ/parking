@@ -32,10 +32,16 @@
 			<img src="img/parking_title.png" style="display: inline; margin-left: 88px;">
 		</div>
 		<div class="searchdiv">
-			<input name="search" type="text" placeholder="To be replaced by Google API" class="mainsearch"></input>
+			<p>Two checkboxes here - filter by 'available' or filter by 'illegal' (todo)</p>
 		</div>
 		<div class="results">
-			<p>Side note if you're passing through and curious - this section is essentially a more qualitative description of the sensor's data. Having a tile pop up on the map to show the basic is great (definitely worth keeping - this menu panel may be hidden on phones and replaced with just the map), but I worry it might be unreasonable to show every piece of information on it - plus it'd be easier to demonstrate the project to people this way. The aesthetics of this box are the last bit I need to do - have run out to finish my passport stuff and get some food beforehand.
+			<p>Side note if you're passing through and curious - this section is essentially a more qualitative description of the sensor's data. Having a tile pop up on the map to show the basic is great (definitely worth keeping - this menu panel may be hidden on phones and replaced with just the map), but I worry it might be unreasonable to show every piece of information on it - plus it'd be easier to demonstrate the project to people this way. The aesthetics of this box are the last bit I need to do - have run out to finish my passport stuff and get some food beforehand.</p>
+			<div class="resultshead">
+				<div class="resultsid">
+				</div>
+				<div class="resultsstatus">
+				</div>
+			</div>
 			<p id="sensorid"></p>
 			<p id="occupied"></p>
 			<p id="duration"></p>
