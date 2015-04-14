@@ -12,11 +12,11 @@
     $id = isset( $_GET['id'] ) ? $_GET['id'] : "10"; // Application field isn't required
 
     // Retrieve the current max sensor_id belonging to this user
-    $sql_statement = $connection->prepare('SELECT occupied, restricted FROM bay_data_view WHERE bay_id = {$id}');
-    $sql_statement->execute();
+    $sql_statement = $connection->prepare('SELECT occupied, restricted FROM bay_data_view WHERE bay_id = ?');
+    $sql_statement->execute( array($id));
 
     $results = $sql_statement->fetchAll();
-    
+
     } catch(Exception $e) {
       die(var_dump($e));
     }
