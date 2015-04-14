@@ -2,7 +2,6 @@
   margin: 0px;
   padding: none;
   font-family: "Helvetica Neue", Helvetica, Arial, Sans-Serif;
-  overflow: hidden;
 }
 
 #map {
@@ -11,6 +10,7 @@
 }
 
 .header {
+  overflow: hidden;
   height: 64px;
   display: inline;
   width: calc(100vw - 64px);
