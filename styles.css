@@ -4,14 +4,9 @@
   font-family: "Helvetica Neue", Helvetica, Arial, Sans-Serif;
 }
 
-#map-container {
-  width: 100%;
-  height: calc(100vh - 70px);
-}
-
 #map {
-	width: 80%;
-	height: 100%;
+	width: 100%;
+	height: calc(100vh - 70px);
 }
 
 .header {

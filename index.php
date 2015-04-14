@@ -33,13 +33,9 @@
 		<img src="img/parking_title.png" style="display: inline; float:left; margin-right: 8px">
 		<p class="apitext">Built with the <a href="http://students.cs.ucl.ac.uk/2014/group10" class="apitext">Orange Labs Sensors API</a></p>
 	</div>
-	<div id ="map-container">
 	<div id="map">
 	</div>
-	<div style="display: inline; float: right; width: 20%; height: 100%; right: 0;">
-	</div>
-</div>
-
+	
 	<script>
 		var map = makeMap(document.getElementById('map'));		
 		<?php
