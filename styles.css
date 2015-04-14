@@ -61,7 +61,8 @@ p.apitext {
   color: #1b1b1b;
   float: right;
   margin-top: 40px;
-  font-size: 12pt;
+  padding-right: 8px;
+  font-size: 10pt;
   display: inline;
 }
 
