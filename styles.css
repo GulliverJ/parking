@@ -26,7 +26,7 @@
   float: left;
   width: 2px;
   height: 50px;
-  margin: 6px;
+  margin-top: 7px;
   border-left-style: solid;
   border-left-width: 1px;
   border-left-color: #ffc59e;
@@ -50,6 +50,14 @@
   margin-left: 8px;
   margin-right: 8px;
   opacity: 0.5;
+}
+
+.parkinglogo {
+  display: inline;
+  float: left;
+  margin-top: 8px;
+  margin-left: 8px;
+  margin-right: 8px;
 }
 
 .sensorslogo:hover {

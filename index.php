@@ -24,11 +24,13 @@
 		<script src="main.js"></script>
 </head>
 <body>
+	<a href="http://victokoh.cs.ucl.ac.uk"><img src="img/main-button.png" class="returnlink"></a>
 	<div class="header">
-		<a href="http://victokoh.cs.ucl.ac.uk"><img src="img/main-button.png" class="returnlink"></a>
 		<a href="http://victokoh.cs.ucl.ac.uk/sensors"><img src="img/sensors_logo.png" class="sensorslogo"></a>
 		<div class="divide">
 		</div>
+		<img src="img/parking_logo.png" class="parkinglogo">
+		<img src="img/parking_title.png">
 	</div>
 	<div id="map">
 	</div>
