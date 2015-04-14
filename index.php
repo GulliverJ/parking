@@ -35,6 +35,8 @@
 	</div>
 	<div id="map">
 	</div>
+	<div style="width: 20%; height: calc(100vh - 64px)">
+	</div>
 	<script>
 		var map = makeMap(document.getElementById('map'));		
 		<?php
