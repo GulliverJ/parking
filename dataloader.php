@@ -13,7 +13,7 @@
       $initial = false;
       echo '{';
       echo '"occupied": ' . ($row[0] ? 'true' : 'false') . ',';
-      echo '"restricted": "' . $row[2] . '"';
+      echo '"restricted": "' . $row[1] . '"';
       echo '}';
     }
   }
