@@ -13,6 +13,7 @@
   display: inline;
   top: 0;
   right: 0;
+  position: fixed;
   float: left;
   background-color: #fff;
   color: #f60;
