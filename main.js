@@ -8,11 +8,11 @@ function makeMap(div) {
 	};
 	var map = new google.maps.Map(div, mapOptions); 
 	return {
-		addMarker: function(id, lat, lng, colour, content) {
+		addMarker: function(id, lat, lng, type, content) {
 			var marker = new google.maps.Marker({
 				position: new google.maps.LatLng(lat, lng),
 				map: map,
-				icon: 'http://maps.google.com/mapfiles/ms/icons/' + colour + '-dot.png',
+				icon: 'img/bayicon-' + type + '.png',
 				title: ''
 			});
 			var infoWindow = new google.maps.InfoWindow({
@@ -43,8 +43,8 @@ function makeMap(div) {
 			});
 			return marker;
 		},
-		updateMarker: function(id, colour, content) {
-			markers[id].setIcon('http://maps.google.com/mapfiles/ms/icons/' + colour + '-dot.png');
+		updateMarker: function(id, type, content) {
+			markers[id].setIcon('img/bayicon-' + type + '.png');
 			infoWindows[id].setContent(content);
 		}
 

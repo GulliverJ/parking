@@ -1,7 +1,7 @@
 <?php
 	require 'connect.php';
 	$bays = array();
-	$query = 'select bays.bay_id, lat, lng, occupied from bays inner join bay_data on bays.bay_id = bay_data.bay_id order by bays.bay_id';
+	$query = 'select b.bay_id, lat, lng, v.occupied, v.legally_occupied from bays b inner join bay_data_view v on b.bay_id = v.bay_id order by b.bay_id';
 	$result = mysql_query($query);
 	if (is_resource($result) && mysql_num_rows($result) > 0) {
 		while ($row = mysql_fetch_row($result)) {
@@ -10,6 +10,7 @@
 			$bay['lat'] = $row[1];
 			$bay['lng'] = $row[2];
 			$bay['occupied'] = $row[3];
+			$bay['legal'] = $row[4];
 			$bays[] = $bay;
 		}
 	}
@@ -57,14 +58,23 @@
 		var map = makeMap(document.getElementById('map'));		
 		<?php
 		foreach ($bays as $bay) {
-			$colour = ($bay['occupied'] ? 'red' : 'green');
-			echo "map.addMarker({$bay['id']}, {$bay['lat']}, {$bay['lng']}, '$colour', '<p>Loading...</p>');";
+
+			if($bay['occupied']) {
+				if($bay['legal']) {
+					$type = 'occ';
+				} else {
+					$type = 'illegal'
+				}
+			} else {
+				$type = 'avail';
+			}
+			echo "map.addMarker({$bay['id']}, {$bay['lat']}, {$bay['lng']}, '$type', '<p>Loading...</p>');";
 		} 
 		?>
 		setInterval(function() {
 			$.getJSON('json.php', function(data) {
 				$.each(data, function(key, value) {
-					map.updateMarker(value.id, (value.occupied ? 'red' : 'green'),
+					map.updateMarker(value.id, (value.occupied ? 'occ' : 'avail'),
 						'<p>Id: ' + value.id + '</p>' +
 						'<p>Occupied: ' + value.occupied + '</p>' + 
 						'<p>Nearest Available Bay:' + value['nearest-unoccupied-bay'] + '</p>' + 
