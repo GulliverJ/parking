@@ -16,7 +16,7 @@
   background-color: #fff;
   color: #f60;
   border-bottom-style: solid;
-  border-bottom-color: #ddd;
+  border-bottom-color: #ccc;
   border-bottom-width: 1px;
 }
 
@@ -25,7 +25,7 @@
   float: left;
   width: 2px;
   height: 50px;
-  margin: 6px;
+  margin-top: 7px;
   border-left-style: solid;
   border-left-width: 1px;
   border-left-color: #ffc59e;
@@ -36,6 +36,8 @@
   float: left;
   opacity: 0.7;
   border-bottom-color: #f60;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
 }
 
 .returnlink:hover {
@@ -61,4 +63,16 @@
   margin-top: 8px;
   margin-left: 8px;
   margin-right: 8px;
+}
+
+.mainsearch {
+  display:inline;
+  float: left;
+  width: 40%;
+  height: 36px;
+  border-style: solid;
+  border-color: #ddd;
+  border-radius: 2px;
+  padding: 6px;
+  color: #333;
 }
