@@ -2,10 +2,8 @@
   require 'connect.php';
   header('Content-Type: application/json');
 
-  ini_set('display_errors','On');
-  error_reporting(E_ALL);
   //$id = isset( $_GET['id'] ) ? $_GET['id'] : "10";
-  $query = 'SELECT occupied FROM bay_data_view WHERE bay_id = 10';
+  $query = 'SELECT occupied FROM bay_data WHERE bay_id = 10';
   $result = mysql_query($query);
   echo '[';
   
