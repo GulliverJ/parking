@@ -7,10 +7,7 @@
   try {
     $connection = new PDO( "mysql:host=$server_name;dbname=$db_name", $db_username, $db_password );
     $connection->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
-    
-      } catch(Exception $e) {
-    die(var_dump($e));
-  }
+
 
     $id = isset( $_GET['id'] ) ? $_GET['id'] : "10"; // Application field isn't required
 
@@ -20,6 +17,9 @@
 
     $results = $sql_statement->fetchAll();
     
+    } catch(Exception $e) {
+      die(var_dump($e));
+    }
     echo '[';
     foreach($results as $row) {
       echo '{';
