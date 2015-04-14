@@ -19,16 +19,6 @@ function makeMap(div) {
 				content: content
 			});
 
- 			var input = (document.getElementById('pac-input'));
-  		map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
-
-  		var searchBox = new google.maps.places.SearchBox((input));
-  		google.maps.event.addListener(searchBox, 'places_changed', function(){
-
-  			var places = searchBox.getPlaces();
-
-  		});
-
 			markers[id] = marker;
 			infoWindows[id] = infoWindow;
 			google.maps.event.addListener(marker, 'click', function() {
