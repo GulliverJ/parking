@@ -13,7 +13,7 @@ function makeMap(div) {
 				position: new google.maps.LatLng(lat, lng),
 				map: map,
 				icon: 'img/bayicon-' + type + '.png',
-				title: 'test',
+				title: '',
 				zIndex: 1
 			});
 			var infoWindow = new google.maps.InfoWindow({
@@ -46,7 +46,7 @@ function makeMap(div) {
 		},
 		updateMarker: function(id, type, content) {
 			markers[id].setIcon('img/bayicon-' + type + '.png');
-			$layer = (type == 'avail') ? 1 : 2;
+			$layer = (type == 'occ') ? 1 : 2;
 			markers[id].setzIndex($layer);
 			infoWindows[id].setContent(content);
 		}
