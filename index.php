@@ -29,6 +29,8 @@
 		<a href="http://victokoh.cs.ucl.ac.uk/sensors"><img src="img/sensors_logo.png" class="sensorslogo"></a>
 	</div>
 	<div id="map">
+		<div style="background-image: url(/img/main_bg.png); background-repeat: repeat-x; height: 100%; width: 100%;">
+		</div>
 	</div>
 	<script>
 		var map = makeMap(document.getElementById('map'));		

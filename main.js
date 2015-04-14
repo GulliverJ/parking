@@ -3,7 +3,7 @@ function makeMap(div) {
 	var infoWindows = [];
 	var mapOptions = {
 		disableDefaultUI: false,
-		zoom: 15,
+		zoom: 17,
 		center: new google.maps.LatLng(51.524498, -0.131812)
 	};
 	var map = new google.maps.Map(div, mapOptions); 
