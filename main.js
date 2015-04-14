@@ -34,13 +34,10 @@ function makeMap(div) {
 						document.getElementById("nearest_available").innerHTML = value.nearest_available;
 						document.getElementById("restrictions").innerHTML = 'Enforced between ' + value.rest_start + ' and ' + value.rest_end;
 						document.getElementById("charge").innerHTML = value.charge;
+						map.panTo(markers[value.nearest_available].getPosition());
 					});
 				});
 				infoWindow.open(map, marker);
-			});
-
-			document.getElementById("findnearest").addEventListener("click", function(){
-   			map.panTo(markers[value.nearest_available]).getPosition());
 			});
 
 			return marker;
@@ -50,9 +47,6 @@ function makeMap(div) {
 			var layer = (type == 'occ') ? 1 : 2;
 			markers[id].setZIndex(layer);
 			infoWindows[id].setContent(content);
-		},
-		findNearest: function(id) {
-			map.panTo(markers[id].getPosition())
 		}
 
 	};
