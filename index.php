@@ -35,7 +35,7 @@
 	</div>
 	<div id="map" style="display: inline; float:left; bottom: 0">
 	</div>
-	<div style="width: 20%; height: calc(100vh - 64px); display:inline; float:right; bottom: 0;">
+	<div style="width: 20vw; height: calc(100vh - 64px); display:inline; float:left; bottom: 0;">
 	</div>
 	<script>
 		var map = makeMap(document.getElementById('map'));		

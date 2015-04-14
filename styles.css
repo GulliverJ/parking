@@ -5,7 +5,7 @@
 }
 
 #map {
-	width: 100%;
+	width: 80vw;
 	height: calc(100vh - 70px);
 }
 
