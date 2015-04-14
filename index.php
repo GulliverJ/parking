@@ -70,7 +70,7 @@
 						'<p>End ' + value.end + '</p>');
 				});
 			});
-		}, 5000);
+		}, 1000);
 	</script>
 </body>
 </html>

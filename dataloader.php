@@ -23,12 +23,12 @@
     echo '[';
     foreach($results as $row) {
       echo '{';
-      echo '"occupied": ' . ($row[0] ? 'Occupied' : 'Available') . ',';
+      echo '"occupied": "' . ($row[0] ? 'Occupied' : 'Available') . '",';
       echo '"duration": "' . $row[1] . '",';
       echo '"remaining": "' . $row[2] . '",';
       echo '"max_stay": "' . $row[3] . '",';
-      echo '"restricted": ' . ($row[4] ? 'Restrictions in place' : 'Free parking') . ',';
-      echo '"legal": ' . ($row[5] ? 'true' : 'false') . ',';
+      echo '"restricted": "' . ($row[4] ? 'Restrictions in place' : 'Free parking') . '",';
+      echo '"legal": "' . ($row[5] ? 'Yes' : 'No') . '",';
       echo '"nearest_available": "' . $row[6] . '",';
       echo '"rest_start": "' . $row[7] . '",';
       echo '"rest_end": "' . $row[8] . '",';
