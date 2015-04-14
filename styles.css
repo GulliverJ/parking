@@ -4,9 +4,23 @@
   font-family: "Helvetica Neue", Helvetica, Arial, Sans-Serif;
 }
 
+.sidebar {
+  display: inline;
+  float: left;
+  width: 400px;
+  height: calc(100vh - 64px);
+  border-left-style: solid;
+  border-left-color: #c7c7c7;
+  border-left-width: 1px;
+  right: 0;
+}
+
 #map {
-	width: 100%;
-	height: calc(100vh - 70px);
+  display: inline;
+  float: left;
+  left: 0;
+	width: calc(100vw - 400px);
+	height: calc(100vh - 64px);
 }
 
 .header {
