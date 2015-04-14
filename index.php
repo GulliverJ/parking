@@ -24,10 +24,12 @@
 		<script src="main.js"></script>
 </head>
 <body>
-	<div class="header">
-		<h1>Orange Parking</h1>
+
+	<div id="map">
+		<div class="header">
+			<h1>Orange Parking</h1>
+		</div>
 	</div>
-	<div id="map"></div>
 	<script>
 		var map = makeMap(document.getElementById('map'));		
 		<?php
@@ -42,10 +44,10 @@
 				console.log(data);
 				$.each(data, function(key, value) {
 					console.log(value);
-					map.updateMarker(value.id, (value.occupied ? 'red' : 'green'), '<p>Id: ' + value.id + '</p><p>Occupied' + value.occupied + '</p>');
+					map.updateMarker(value.id, (value.occupied ? 'red' : 'green'), '<p>Id: ' + value.id + '</p><p>Occupied ' + value.occupied + '</p>');
 				});
 			});
-		}, 10000);
+		}, 1000);
 	</script>
 </body>
 </html>
