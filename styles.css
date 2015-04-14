@@ -118,16 +118,21 @@ h4.menuitem {
   border-bottom-style: dashed;
   border-bottom-color: #eee;
   border-bottom-width: 1px;
+  display: block;
 }
 
 .col1 {
   width:240px;
   font-weight: bold;
+  display: inline;
+  float:left;
 
 }
 
 .col2 {
   width: 146px;
+  display: inline;
+  float: left;
 }
 
 .footer {
