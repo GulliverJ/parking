@@ -6,23 +6,23 @@
 
 .sidebar {
   display: inline;
-  float: right;
+  float: left;
   position: fixed;
   width: 400px;
   height: calc(100vh - 64px);
   border-left-style: solid;
   border-left-color: #c7c7c7;
   border-left-width: 1px;
-  right: 0;
+  left: 0;
   bottom: 0;
 }
 
 #map {
   display: inline;
-  float: left;
+  float: right;
   margin-top: 65px;
   position: fixed;
-  left: 0;
+  right: 0;
   bottom: 0;
 	width: calc(100vw - 400px);
 	height: calc(100vh - 65px);
