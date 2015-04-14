@@ -1,7 +1,7 @@
 <?php
   require 'connect.php';
   header('Content-Type: application/json');
-  $id = isset($_GET['id']) ? $_GET['id'] : "";
+  $id = isset($_GET['id']) ? $_GET['id'] : 10;
   $query = 'SELECT occupied, restricted FROM bay_data_view WHERE bay_id = {$id}';   
   $result = mysql_query($query);
   echo '[';
