@@ -30,12 +30,11 @@
 		<div class="header">
 			<a href="http://victokoh.cs.ucl.ac.uk"><img src="img/main-button.png" class="returnlink"></a>
 			<img src="img/parking_title.png" style="display: inline; margin-left: 56px;">
-			<img src="img/parking_logo.png" class="parkinglogo">
 		</div>
 		<div class="results">
 			<div class="resultshead">
 				<div class="resultsbox" style="width: 100px">
-					<p class="menulabel">Bay ID: </p><br>
+					<p class="menulabel">Bay ID: </p>
 					<h4 class="menuitem" id="sensorid"></h4>
 				</div>
 				<div class="resultsbox" style="width: 216px">
@@ -47,8 +46,23 @@
 				</div>
 			</div>
 			<div class="resultsmain">
+				<div class="resultsrow">
+					<div class="col1">
+						<h1>Duration</h1>
+					</div>
+					<div class="col1">
+						<p id="duration"></p>
+					</div>
+				</div>
+				<div class="resultsrow">
+					<div class="col1">
+						<h1>Maximum Stay</h1>
+					</div>
+					<div class="col1">
+						<p id="max_stay"></p>
+					</div>
+				</div>
 				<p id="occupied"></p>
-				<p id="duration"></p>
 				<p id="max_stay"></p>
 				<p id="remaining"></p>
 				<p id="restricted"></p>

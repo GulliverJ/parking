@@ -97,7 +97,8 @@ p.menulabel {
 h4.menuitem {
   font-size: 20px;
   color: #444;
-  margin-left: 8px;
+  margin-top: 4px;
+  margin-left: 12px;
   line-height: 20px;
 }
 
@@ -114,6 +115,19 @@ h4.menuitem {
   width: 386px;
   padding-left: 7px;
   padding-right: 7px;
+  border-bottom-style: dashed;
+  border-bottom-color: #eee;
+  border-bottom-width: 1px;
+}
+
+.col1 {
+  width:240px;
+  font-weight: bold;
+
+}
+
+.col2 {
+  width: 146px;
 }
 
 .footer {
