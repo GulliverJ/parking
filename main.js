@@ -24,7 +24,7 @@ function makeMap(div) {
 				infoWindow.open(map, marker);
 				document.getElementById("sensorid").innerHTML = 'Sensor ID: ' + id + infoWindows[id].getContent();
 				var query = 'SELECT occupied, state_time, time_remaining, legally_occupied, restricted, max_stay, nearest_unoccupied_bay FROM bay_data_view WHERE bay_id = {$id}';
-				$.getJSON('dataloader.php+query='+query, function(data) {
+				$.getJSON('dataloader.php', id, function(data) {
 					$.each(data, function(key, value) {
 						document.getElementByID("occupied").innerHTML = 'Occupied: ' + value.occupied;
 						document.getElementByID("duration").innerHTML = 'For: ' + value.duration;

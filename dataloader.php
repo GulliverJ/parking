@@ -2,7 +2,9 @@
   require 'connect.php';
   header('Content-Type: application/json');
 
-  $result = mysql_query($_GET['query']);
+  $id = $_GET['id'];
+  $query = 'SELECT occupied, state_time, time_remaining, legally_occupied, restricted, max_stay, nearest_unoccupied_bay FROM bay_data_view WHERE bay_id = {$id}';
+  $result = mysql_query($query);
   echo '[';
   if (is_resource($result) && mysql_num_rows($result)) {
     $initial = true;
