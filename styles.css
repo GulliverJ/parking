@@ -96,23 +96,17 @@ a.apitext:hover {
   margin-right: 8px;
 }
 
-.searchdiv {
-  width: 400px;
-  height: 58px;
-}
-
 .resultshead {
   width: 400px;
   height: 72px;
-  padding: 16px;
+  margin: 4px;
   display: block;
   border-bottom-color: #ddd;
   border-bottom-style: solid;
   border-bottom-width: 1px;
 }
 
-.resultsid {
-  width: 140px;
+.resultsbox {
   height: 100%;
   float: left;
   display: inline;
@@ -128,16 +122,10 @@ h4.idlabel {
   color: #444;
 }
 
-.resultsstatus {
-  width: 260px;
-  height: 100%;
-  float: left;
-  display: inline;
-}
-
 .resultsmain {
   display: block;
   width: 400px;
+  margin: 4px;
 }
 
 .footer {

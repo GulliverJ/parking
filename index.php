@@ -36,11 +36,15 @@
 		</div>
 		<div class="results">
 			<div class="resultshead">
-				<div class="resultsid">
+				<div class="resultsbox" style="width: 140px">
 					<p.idlabel>Bay ID:</p><br>
 					<h4.idlabel id="sensorid"></h4>
 				</div>
-				<div class="resultsstatus">
+				<div class="resultsbox" style="width: 220px">
+					<p.idlabel>Status:</p><br>
+					<h4.idLabel id="occupied"></h4>
+				</div>
+				<div class="resultsbox" style="width: 40px">
 					<p.idlabel>Status:</p><br>
 					<h4.idLabel id="occupied"></h4>
 				</div>
