@@ -17,6 +17,7 @@
 			echo '"nearest-unoccupied-bay": ' . $row[2] . ',';
 			echo '"max-stay": "' . $row[3] . '",';
 			echo '"start": "' . $row[3] . '",';
+			echo 'please come on skype ';
 			echo '"end": "' . $row[3] . '"';
 //			echo '"start": "' . $row[4] . '",';
 //			echo '"end": "' . $row[5]; . '"';
