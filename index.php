@@ -67,7 +67,7 @@
 						<p>Time Remaining</p>
 					</div>
 					<div class="col2">
-						<p id="max_stay"></p>
+						<p id="remaining"></p>
 					</div>
 				</div>
 				<div class="resultsrow">
@@ -91,7 +91,6 @@
 						<p>Nearest Available Bay</p>
 					</div>
 					<div class="col2">
-						<p id="nearest_available"></p>
 						<button>Show on the map</button>
 					</div>
 				</div>
