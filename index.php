@@ -35,8 +35,6 @@
 		<p class="apitext">Built with the <a href="http://students.cs.ucl.ac.uk/2014/group10" class="apitext">Orange Labs Sensors API</a></p>
 	</div>
 </div>
-	<div id="map">
-	</div>
 	<div class="sidebar">
 		<p id="sensorid"></p>
 		<p id="occupied"></p>
@@ -50,6 +48,9 @@
 		<p id="charge"></p>
 
 	</div>
+	<div id="map">
+	</div>
+
 	<script>
 		var map = makeMap(document.getElementById('map'));		
 		<?php
