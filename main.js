@@ -22,6 +22,7 @@ function makeMap(div) {
 			infoWindows[id] = infoWindow;
 			google.maps.event.addListener(marker, 'click', function() {
 				infoWindow.open(map, marker);
+				document.getElementById("sensorid").innerHTML = 'Sensor ID: ' + id + infoWindows[id].getContent();
 			});
 			return marker;
 		},
