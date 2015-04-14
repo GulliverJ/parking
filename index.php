@@ -58,7 +58,13 @@
 		setInterval(function() {
 			$.getJSON('json.php', function(data) {
 				$.each(data, function(key, value) {
-					map.updateMarker(value.id, (value.occupied ? 'red' : 'green'), '<p>Id: ' + value.id + '</p><p>Occupied ' + value.occupied + '</p>');
+					map.updateMarker(value.id, (value.occupied ? 'red' : 'green'),
+						'<p>Id: ' + value.id + '</p>' +
+						'<p>Occupied: ' + value.occupied + '</p>' + 
+						'<p>Nearest Available Bay:' + value['nearest-unoccupied-bay'] + '</p>' + 
+						(value['max-stay'] ? '<p>Max Stay: ' + value['max-stay'] + '</p>' : '') + 
+						'<p>Start ' + value.start + '</p>' + 
+						'<p>End ' + value.end + '</p>');
 				});
 			});
 		}, 5000);
