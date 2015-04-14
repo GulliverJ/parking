@@ -21,7 +21,6 @@
 #map {
   display: inline;
   float: left;
-  position: fixed;
   left: 0;
   bottom: 0;
 	width: calc(100vw - 400px);
