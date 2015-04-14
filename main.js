@@ -26,7 +26,7 @@ function makeMap(div) {
 					$.each(data, function(key, value) {
 						document.getElementById("sensorid").innerHTML = id;
 						console.log(value.occupied);
-						document.getElementById("occupied").innerHTML = (value.occupied) ? 'Occupied' : 'Available';
+						document.getElementById("occupied").innerHTML = value.occupied;
 						document.getElementById("duration").innerHTML = 'For: ' + value.duration + ' seconds - todo convert';
 						document.getElementById("max_stay").innerHTML = 'Time limit: ' + value.max_stay;
 						document.getElementById("remaining").innerHTML = 'Time remaining: ' + value.remaining;
