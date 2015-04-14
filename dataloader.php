@@ -27,6 +27,5 @@
       echo '}';
     }
   }
-  echo 'test';
   echo ']';
 ?>
