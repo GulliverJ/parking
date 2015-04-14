@@ -24,8 +24,11 @@ function makeMap(div) {
 				infoWindow.open(map, marker);
 				console.log(id);
 				$(function() {
+					console.log(id);
 				$.getJSON('dataloader.php', id, function(data) {
+					console.log(id);
 					$.each(data, function(key, value) {
+						console.log(id);
 						console.log(data);
 						console.log(value);
 
@@ -40,6 +43,7 @@ function makeMap(div) {
 					});
 				});
 				});
+				document.getElementByID("occupied").innerHTML = 'Occupied: ' + infoWindow[id].getContent();
 				// Ideally want to initiate code to get the values and display them. right?
 			});
 			return marker;
