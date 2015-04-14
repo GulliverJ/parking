@@ -25,7 +25,7 @@ function makeMap(div) {
 				$.getJSON('dataloader.php?id=' + id, function(data) {
 					$.each(data, function(key, value) {
 						document.getElementById("sensorid").innerHTML = id;
-						document.getElementById("occupied").innerHTML = (value.occupied == '1') ? 'Occupied' : 'Available';
+						document.getElementById("occupied").innerHTML = (value.occupied == 1) ? 'Occupied' : 'Available';
 						document.getElementById("duration").innerHTML = 'For: ' + value.duration + ' seconds - todo convert';
 						document.getElementById("max_stay").innerHTML = 'Time limit: ' + value.max_stay;
 						document.getElementById("remaining").innerHTML = 'Time remaining: ' + value.remaining;
