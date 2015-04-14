@@ -23,6 +23,7 @@ function makeMap(div) {
 			google.maps.event.addListener(marker, 'click', function() {
 				console.log(id);
 				
+				(function() {
 				$.getJSON('dataloader.php', function(data) {
 					console.log(id);
 					$.each(data, function(key, value) {
@@ -38,6 +39,7 @@ function makeMap(div) {
 
 					});
 				});
+				})();
 				infoWindow.open(map, marker);
 			// Ideally want to initiate code to get the values and display them. right?
 			});
