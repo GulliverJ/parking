@@ -31,7 +31,6 @@
 			<div class="divide">
 			</div>
 			<img src="img/parking_title.png" style="display: inline; float:left; margin-right: 8px">
-			<img src="img/parking_logo.png" class="parkinglogo">
 		</div>
 		<div class="results">
 			<p id="sensorid"></p>
