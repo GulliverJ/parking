@@ -68,7 +68,7 @@
 .mainsearch {
   display:inline;
   float: left;
-  width: 40%;
+  width: 40vw;
   height: 36px;
   border-style: solid;
   border-color: #ddd;
