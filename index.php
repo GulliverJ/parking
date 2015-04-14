@@ -61,7 +61,7 @@
 					map.updateMarker(value.id, (value.occupied ? 'red' : 'green'), '<p>Id: ' + value.id + '</p><p>Occupied ' + value.occupied + '</p>');
 				});
 			});
-		}, 1000);
+		}, 5000);
 	</script>
 </body>
 </html>
