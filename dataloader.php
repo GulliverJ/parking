@@ -1,8 +1,7 @@
 <?php
   require 'connect.php';
   header('Content-Type: application/json');
-  $id = isset($_GET['id']) ? $_GET['id'] : 10;
-  $query = 'SELECT occupied, restricted FROM bay_data_view WHERE bay_id = {$id}';   
+  $query = 'SELECT occupied, restricted FROM bay_data_view WHERE bay_id = 10';   
   $result = mysql_query($query);
   echo '[';
   if (is_resource($result) && mysql_num_rows($result)) {
