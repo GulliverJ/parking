@@ -12,8 +12,7 @@ function makeMap(div) {
 			var marker = new google.maps.Marker({
 				position: new google.maps.LatLng(lat, lng),
 				map: map,
-				//icon: 'http://maps.google.com/mapfiles/ms/icons/' + colour + '-dot.png',
-				icon: 'img/testicon.png',
+				icon: 'http://maps.google.com/mapfiles/ms/icons/' + colour + '.png',
 				title: ''
 			});
 			var infoWindow = new google.maps.InfoWindow({
@@ -27,8 +26,7 @@ function makeMap(div) {
 			return marker;
 		},
 		updateMarker: function(id, colour, content) {
-			//markers[id].setIcon('http://maps.google.com/mapfiles/ms/icons/' + colour + '-dot.png');
-			markers[id].setIcon('img/testicon.png');
+			markers[id].setIcon('http://maps.google.com/mapfiles/ms/icons/' + colour + '.png');
 			infoWindows[id].setContent(content);
 		}
 	};
