@@ -104,7 +104,11 @@ a.apitext:hover {
 .resultshead {
   width: 400px;
   height: 72px;
+  padding: 16px;
   display: block;
+  border-bottom-color: #ddd;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
 }
 
 .resultsid {
