@@ -30,7 +30,7 @@
 		<div class="divide">
 		</div>
 		<img src="img/parking_logo.png" class="parkinglogo">
-		<img src="img/parking_title.png" style="display: inline; float: left">
+		<img src="img/parking_title.png" style="display: inline; float: left;">
 	</div>
 	<div id="map">
 	</div>
