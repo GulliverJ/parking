@@ -124,15 +124,20 @@ h4.menuitem {
 .col1 {
   width:240px;
   font-weight: bold;
+  font-size: 12px;
   display: inline;
   float:left;
+  background-color: #ff0;
 
 }
 
 .col2 {
   width: 146px;
+  font-weight: lighter;
+  font-size: 12px;
   display: inline;
   float: left;
+    background-color: #f0f;
 }
 
 .footer {
