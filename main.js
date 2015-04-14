@@ -21,28 +21,28 @@ function makeMap(div) {
 			markers[id] = marker;
 			infoWindows[id] = infoWindow;
 			google.maps.event.addListener(marker, 'click', function() {
-				infoWindow.open(map, marker);
+
 				console.log(id);
 				$(function() {
 					console.log(id);
-				$.getJSON('dataloader.php', id, function(data) {
-					console.log(id);
-					$.each(data, function(key, value) {
+					$.getJSON('dataloader.php', function(data) {
 						console.log(id);
-						console.log(data);
-						console.log(value);
+						$.each(data, function(key, value) {
+							console.log(data);
+							console.log(value);
 
-						document.getElementByID("occupied").innerHTML = 'Occupied: ' + value.occupied;
-						document.getElementByID("duration").innerHTML = 'For: ' + value.duration;
-						document.getElementByID("remaining").innerHTML = 'Time remaining: ' + value.remaining;
-						document.getElementByID("legal").innerHTML = 'Legally parked: ' + value.legal;
-						document.getElementByID("restricted").innerHTML = 'Restricted: ' + value.restricted;
-						document.getElementByID("max_stay").innerHTML = 'Maximum stay: ' + value.max_stay;
-						document.getElementByID("nearest_unoccupied").innerHTML = 'Nearest unoccupied bay: ' + value.nearest_unoccupied;
+							document.getElementByID("occupied").innerHTML = 'Occupied: ' + value.occupied;
+							document.getElementByID("duration").innerHTML = 'For: ' + value.duration;
+							document.getElementByID("remaining").innerHTML = 'Time remaining: ' + value.remaining;
+							document.getElementByID("legal").innerHTML = 'Legally parked: ' + value.legal;
+							document.getElementByID("restricted").innerHTML = 'Restricted: ' + value.restricted;
+							document.getElementByID("max_stay").innerHTML = 'Maximum stay: ' + value.max_stay;
+							document.getElementByID("nearest_unoccupied").innerHTML = 'Nearest unoccupied bay: ' + value.nearest_unoccupied;
 
+						});
 					});
 				});
-				});
+				infoWindow.open(map, marker);
 				document.getElementByID("occupied").innerHTML = 'Occupied: ' + infoWindow[id].getContent();
 				// Ideally want to initiate code to get the values and display them. right?
 			});
