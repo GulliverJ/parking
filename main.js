@@ -34,8 +34,8 @@ function makeMap(div) {
 						document.getElementById("restricted").innerHTML = value.restricted;
 						document.getElementById("legal").innerHTML = 'Legally parked: ' + value.legal;
 						document.getElementById("nearest_available").innerHTML = 'Nearest available bay: ' + value.nearest_available;
-						document.getElementById("restrictions").innerHTML = 'Restrictions between ' + value.rest_start; + ' and ' + value.rest_end;
-						document.getElementById("charge").innerHTML = 'Hourly charge: £' + value.nearest_available;
+						document.getElementById("restrictions").innerHTML = 'Restrictions between ' + value.rest_start + ' and ' + value.rest_end;
+						document.getElementById("charge").innerHTML = 'Hourly charge: £' + value.charge;
 					});
 				});
 				infoWindow.open(map, marker);
