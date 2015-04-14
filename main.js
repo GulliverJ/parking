@@ -21,7 +21,7 @@ function makeMap(div) {
 			markers[id] = marker;
 			infoWindows[id] = infoWindow;
 			google.maps.event.addListener(marker, 'click', function() {
-				$.getJSON('dataloader.php', function(data) {
+				$.getJSON('json.php', function(data) {
 					$.each(data, function(key, value) {
 						console.log(id);
 						console.log(value.occupied);
