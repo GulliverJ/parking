@@ -10,9 +10,6 @@
   position: fixed;
   width: 400px;
   height: 100%;
-  border-right-style: solid;
-  border-right-color: #c7c7c7;
-  border-right-width: 1px;
   left: 0;
   bottom: 0;
 }
@@ -36,6 +33,9 @@
   top: 0;
 	width: calc(100vw - 400px);
 	height: 100vh;
+  border-left-style: solid;
+  border-left-color: #c7c7c7;
+  border-left-width: 1px;
 }
 
 
@@ -72,12 +72,9 @@
 
 p.apitext {
   color: #eee;
-  float: left;
   font-size: 10pt;
   display: block;
   padding-top: 6px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 a.apitext {
@@ -102,7 +99,7 @@ a.apitext:hover {
 
 .searchdiv {
   width: 400px;
-  height: 72px;
+  height: 64px;
 }
 
 .footer {
