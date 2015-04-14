@@ -50,19 +50,6 @@
   border-bottom-width: 1px;
 }
 
-.divide {
-  display: inline;
-  float: left;
-  width: 2px;
-  height: 50px;
-  margin-top: 7px;
-  margin-left: 8px;
-  margin-right: 8px;
-  border-left-style: solid;
-  border-left-width: 1px;
-  border-left-color: #ffc59e;
-}
-
 .returnlink {
   display: inline;
   width: 64px;
@@ -78,15 +65,6 @@
 
 .returnlink:hover {
   opacity: 1;
-}
-
-.sensorslogo {
-  display: inline;
-  float: left;
-  margin-top: 8px;
-  margin-left: 8px;
-  margin-right: 8px;
-  opacity: 0.5;
 }
 
 p.apitext {
@@ -108,10 +86,6 @@ a.apitext:hover {
   color: #1b1b1b;
 }
 
-.sensorslogo:hover {
-  opacity: 1;
-}
-
 .parkinglogo {
   display: inline;
   float: left;
@@ -120,11 +94,16 @@ a.apitext:hover {
   margin-right: 8px;
 }
 
+.searchdiv {
+  width: 400px;
+  height: 96px;
+}
+
 .mainsearch {
-  display:inline;
-  float: left;
-  width: 40vw;
-  height: 36px;
+  display:block;
+  margin-left: 30px;
+  width: 340px;
+  height: 20px;
   border-style: solid;
   border-color: #ddd;
   border-radius: 4px;
@@ -132,5 +111,5 @@ a.apitext:hover {
   margin-top: 7px;
   padding: 6px;
   color: #333;
-  font-size: 16pt;
+  font-size: 14pt;
 }
