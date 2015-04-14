@@ -24,6 +24,7 @@
 		<script src="main.js"></script>
 </head>
 <body>
+	<div class="topbar">
 	<a href="http://victokoh.cs.ucl.ac.uk"><img src="img/main-button.png" class="returnlink"></a>
 	<div class="header">
 		<a href="http://victokoh.cs.ucl.ac.uk/sensors"><img src="img/sensors_logo.png" class="sensorslogo"></a>
@@ -33,6 +34,7 @@
 		<img src="img/parking_title.png" style="display: inline; float:left; margin-right: 8px">
 		<p class="apitext">Built with the <a href="http://students.cs.ucl.ac.uk/2014/group10" class="apitext">Orange Labs Sensors API</a></p>
 	</div>
+</div>
 	<div id="map">
 	</div>
 	<div class="sidebar">

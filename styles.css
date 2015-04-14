@@ -27,12 +27,18 @@
 	height: calc(100vh - 64px);
 }
 
+.topbar {
+  width: 100%;
+  top: 0;
+  height: 64px;
+}
+
 .header {
   height: 64px;
   right: 0;
   top: 0;
   display: inline;
-  width: calc(100vw - 64px);
+  width: calc(100% - 64px);
   float: left;
   background-color: #fff;
   color: #f60;
@@ -54,6 +60,8 @@
 
 .returnlink {
   display: inline;
+  width: 64px;
+  height: 64px;
   float: left;
   top: 0;
   left: 0;
