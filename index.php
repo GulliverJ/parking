@@ -52,7 +52,7 @@
 		<?php
 		foreach ($bays as $bay) {
 			$colour = ($bay['occupied'] ? 'red' : 'green');
-			echo "map.addMarker({$bay['id']}, {$bay['lat']}, {$bay['lng']}, '$colour', '<p>Testing this</p>');";
+			echo "map.addMarker({$bay['id']}, {$bay['lat']}, {$bay['lng']}, '$colour', '<p>Loading...</p>');";
 		} 
 		?>
 		setInterval(function() {
