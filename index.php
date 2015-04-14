@@ -25,7 +25,8 @@
 </head>
 <body>
 	<div class="header">
-
+		<a href="http://victokoh.cs.ucl.ac.uk"><img src="img/main-button.png" style="float: left"></a>
+		<a href="http://victokoh.cs.ucl.ac.uk/sensors"><img src="img/sensors_logo.png" class="sensorslogo"></a>
 	</div>
 	<div id="map">
 	</div>
