@@ -31,9 +31,6 @@
 			<a href="http://victokoh.cs.ucl.ac.uk"><img src="img/main-button.png" class="returnlink"></a>
 			<img src="img/parking_title.png" style="display: inline; margin-left: 88px;">
 		</div>
-		<div class="searchdiv">
-			<p>Two checkboxes here - filter by 'available' or filter by 'illegal' (todo)</p>
-		</div>
 		<div class="results">
 			<div class="resultshead">
 				<div class="resultsbox" style="width: 140px">
@@ -45,8 +42,8 @@
 					<h4.idLabel id="occupied"></h4>
 				</div>
 				<div class="resultsbox" style="width: 40px">
-					<p.idlabel>Status:</p><br>
-					<h4.idLabel id="occupied"></h4>
+					<p.idlabel>Icon:</p><br>
+					<img id="icon">
 				</div>
 			</div>
 			<div class="resultsmain">
