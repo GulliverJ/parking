@@ -35,7 +35,6 @@
 	</div>
 	<div id="map">
 	</div>
-	
 	<script>
 		var map = makeMap(document.getElementById('map'));		
 		<?php

@@ -29,11 +29,6 @@ function makeMap(div) {
 			markers[id].setIcon('http://maps.google.com/mapfiles/ms/icons/' + colour + '-dot.png');
 			infoWindows[id].setContent(content);
 		}
-,
-		google.maps.event.addListener(markers[id], 'click', function(id, content) {
-   		infowindow.setContent(content);
-   		infowindow.open(map, this);
-		});
 
 	};
 
