@@ -63,7 +63,7 @@
 				if($bay['legal']) {
 					$type = 'occ';
 				} else {
-					$type = 'illegal'
+					$type = 'illegal';
 				}
 			} else {
 				$type = 'avail';
