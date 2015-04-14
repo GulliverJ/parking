@@ -41,7 +41,8 @@ function makeMap(div) {
 			return marker;
 		},
 		updateMarker: function(id, colour, content) {
-			markers[id].setIcon('http://maps.google.com/mapfiles/ms/icons/' + colour + '-dot.png');
+			//markers[id].setIcon('http://maps.google.com/mapfiles/ms/icons/' + colour + '-dot.png');
+			markers[id].setIcon('img/testicon.png');
 			infoWindows[id].setContent(content);
 		}
 

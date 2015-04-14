@@ -17,7 +17,7 @@
       }
       $initial = false;
       echo '{';
-      echo '"occupied": ' . ({$row[0]} ? 'Yes' : 'No') . ',';
+      echo '"occupied": ' . ({$row[0] ? 'Yes' : 'No') . ',';
       echo '"duration": {$row[1]},';
       echo '"remaining": {$row[2]},';
       echo '"legal": ' . ({$row[3] ? 'Yes' : 'No'} . ',';
