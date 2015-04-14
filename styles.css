@@ -72,6 +72,8 @@ p.apitext {
   float: left;
   font-size: 10pt;
   display: block;
+  text-align: center;
+  padding-top: 6px;
 }
 
 a.apitext {
@@ -110,6 +112,7 @@ a.apitext:hover {
 .mainsearch {
   display:block;
   margin: auto;
+  margin-top: 15px;
   width: 340px;
   height: 20px;
   border-style: solid;
