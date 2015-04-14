@@ -30,6 +30,7 @@
 		<div class="header">
 			<a href="http://victokoh.cs.ucl.ac.uk"><img src="img/main-button.png" class="returnlink"></a>
 			<img src="img/parking_title.png" style="display: inline; margin-left: 56px;">
+			<img src="img/parking_logo.png" class="parkinglogo">
 		</div>
 		<div class="results">
 			<div class="resultshead">
