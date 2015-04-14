@@ -45,7 +45,9 @@
 			<p id="restrictions"></p>
 			<p id="charge"></p>
 		</div>
-		<p class="apitext">Built with the <a href="http://students.cs.ucl.ac.uk/2014/group10" class="apitext">Orange Labs Sensors API</a></p>
+		<div class="footer">
+			<p class="apitext">Built with the <a href="http://students.cs.ucl.ac.uk/2014/group10" class="apitext">Orange Labs Sensors API</a></p>
+		</div>
 	</div>
 	<div id="map">
 	</div>

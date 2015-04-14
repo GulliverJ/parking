@@ -68,7 +68,7 @@
 }
 
 p.apitext {
-  color: #1b1b1b;
+  color: #eee;
   float: left;
   font-size: 10pt;
   display: block;
@@ -96,12 +96,20 @@ a.apitext:hover {
 
 .searchdiv {
   width: 400px;
-  height: 96px;
+  height: 72px;
+}
+
+.footer {
+  width: 400px;
+  height: 30px;
+  background-color: #1b1b1b;
+  bottom: 0;
+  position: fixed;
 }
 
 .mainsearch {
   display:block;
-  margin-left: 30px;
+  margin: auto;
   width: 340px;
   height: 20px;
   border-style: solid;
