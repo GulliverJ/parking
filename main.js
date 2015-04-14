@@ -28,19 +28,19 @@ function makeMap(div) {
 					$.each(data, function(key, value) {
 						console.log(id);
 						console.log(value.occupied);
-						document.getElementById("occupied").innerHTML = 'Occupied: ' + value.occupied;
-						document.getElementById("duration").innerHTML = 'For: ' + value.duration;
+						//document.getElementById("occupied").innerHTML = 'Occupied: ' + value.occupied;
+						//document.getElementById("duration").innerHTML = 'For: ' + value.duration;
 						//document.getElementByID("remaining").innerHTML = 'Time remaining: ' + value.remaining;
 						//document.getElementByID("legal").innerHTML = 'Legally parked: ' + value.legal;
-						document.getElementById("restricted").innerHTML = 'Restricted: ' + value.restricted;
-						document.getElementById("max_stay").innerHTML = 'Maximum stay: ' + value.max_stay;
-						document.getElementById("nearest_unoccupied").innerHTML = 'Nearest unoccupied bay: ' + value.nearest_unoccupied;
+						//document.getElementById("restricted").innerHTML = 'Restricted: ' + value.restricted;
+						//document.getElementById("max_stay").innerHTML = 'Maximum stay: ' + value.max_stay;
+						//document.getElementById("nearest_unoccupied").innerHTML = 'Nearest unoccupied bay: ' + value.nearest_unoccupied;
 
 					});
 				});
-			infoWindow.open(map, marker);
+				infoWindow.open(map, marker);
 			// Ideally want to initiate code to get the values and display them. right?
-		});
+			});
 			return marker;
 		},
 		updateMarker: function(id, colour, content) {
