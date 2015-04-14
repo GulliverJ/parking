@@ -13,7 +13,18 @@
   height: 64px;
   background-color: #fff;
   color: #f60;
-  box-shadow: 0px 0px 10px #222;
+  border-bottom-style: solid;
+  border-bottom-color: #eee;
+  border-bottom-width: 1px;
+}
+
+.divide {
+  width: 1px;
+  height: 50px;
+  margin: 7px;
+  border-left-style: solid;
+  border-left-width: 1px;
+  border-left-color: #ffc59e;
 }
 
 .returnlink {
@@ -34,10 +45,4 @@
 
 .sensorslogo:hover {
   opacity: 1;
-}
-
-* {
-  margin: 0px;
-  padding: none;
-  font-family: "Helvetica Neue", Helvetica, Arial, Sans-Serif;
 }
