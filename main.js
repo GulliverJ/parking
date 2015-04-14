@@ -20,7 +20,7 @@ function makeMap(div) {
 			});
 			markers[id] = marker;
 			infoWindows[id] = infoWindow;
-			google.maps.event.addListener(marker, 'click', function() {}
+			google.maps.event.addListener(marker, 'click', function() {
 				console.log(id);
 				
 				$.getJSON('dataloader.php', function(data) {
