@@ -25,6 +25,15 @@ function makeMap(div) {
 				console.log(id);
 				$(function() {
 					console.log(id);
+
+					$.getJSON('json.php', function(data) {
+						$.each(data, function(key, value) {
+							console.log(data);
+							console.log(id);
+						});
+					});
+
+					/*
 					$.getJSON('dataloader.php', function(data) {
 						$.each(result[0], function(key, value) {
 							console.log(id);
@@ -38,7 +47,7 @@ function makeMap(div) {
 							document.getElementByID("nearest_unoccupied").innerHTML = 'Nearest unoccupied bay: ' + value.nearest_unoccupied;
 
 						});
-					});
+					});*/
 				});
 				infoWindow.open(map, marker);
 				// Ideally want to initiate code to get the values and display them. right?
