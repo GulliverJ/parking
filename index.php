@@ -38,6 +38,8 @@
 	<div id="map">
 	</div>
 	<div class="sidebar">
+		<p id="sensorid"></p>
+		<p id="timeremaining"></p>
 	</div>
 	<script>
 		var map = makeMap(document.getElementById('map'));		
