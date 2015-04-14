@@ -43,7 +43,6 @@ function makeMap(div) {
 					});
 				});
 				infoWindow.open(map, marker);
-				document.getElementByID("occupied").innerHTML = 'Occupied: ' + infoWindow[id].getContent();
 				// Ideally want to initiate code to get the values and display them. right?
 			});
 			return marker;
