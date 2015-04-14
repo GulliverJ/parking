@@ -26,14 +26,16 @@ function makeMap(div) {
 						console.log(id);
 						console.log(value.occupied);
 						console.log(value.restricted);
-						document.getElementById("occupied").innerHTML = 'Occupied: ' + value.occupied;
-						//document.getElementById("duration").innerHTML = 'For: ' + value.duration;
-						//document.getElementByID("remaining").innerHTML = 'Time remaining: ' + value.remaining;
-						//document.getElementByID("legal").innerHTML = 'Legally parked: ' + value.legal;
-						document.getElementById("restricted").innerHTML = 'Restricted: ' + value.restricted;
-						//document.getElementById("max_stay").innerHTML = 'Maximum stay: ' + value.max_stay;
-						//document.getElementById("nearest_unoccupied").innerHTML = 'Nearest unoccupied bay: ' + value.nearest_unoccupied;
-
+						document.getElementById("sensorid").innerHTML = "ID: " + id;
+						document.getElementById("occupied").innerHTML = 'Has been: ' + value.occupied;
+						document.getElementById("duration").innerHTML = 'For: ' + value.duration + ' seconds - todo convert';
+						document.getElementById("max_stay").innerHTML = 'Time limit: ' + value.max_stay;
+						document.getElementById("remaining").innerHTML = 'Time remaining: ' + value.remaining;
+						document.getElementById("restricted").innerHTML = value.restricted;
+						document.getElementById("legal").innerHTML = 'Legally parked: ' + value.legal;
+						document.getElementById("nearest_available").innerHTML = 'Nearest available bay: ' + value.nearest_available;
+						document.getElementById("restrictions").innerHTML = 'Restrictions between ' + value.rest_start; + ' and ' + value.rest_end;
+						document.getElementById("charge").innerHTML = 'Hourly charge: £' + value.nearest_available;
 					});
 				});
 				infoWindow.open(map, marker);

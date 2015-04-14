@@ -41,11 +41,14 @@
 		<p id="sensorid"></p>
 		<p id="occupied"></p>
 		<p id="duration"></p>
-		<p id="remaining"></p>
-		<p id="legal"></p>
-		<p id="restricted"></p>
 		<p id="max_stay"></p>
-		<p id="nearest_unoccupied"></p>
+		<p id="remaining"></p>
+		<p id="restricted"></p>
+		<p id="legal"></p>
+		<p id="nearest_available"></p>
+		<p id="restrictions"></p>
+		<p id="charge"></p>
+
 	</div>
 	<script>
 		var map = makeMap(document.getElementById('map'));		
