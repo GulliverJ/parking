@@ -27,7 +27,7 @@ function makeMap(div) {
 						document.getElementById("sensorid").innerHTML = id;
 						console.log(value.occupied);
 						document.getElementById("occupied").innerHTML = value.occupied;
-						document.getElementById("duration").innerHTML = value.duration/3600 + ":" + value.duration%3600 + ":" + value.duration%60;
+						document.getElementById("duration").innerHTML = parseInt(value.duration/3600) + ":" + parseInt(value.duration/60) + ":" + value.duration%60;
 						document.getElementById("max_stay").innerHTML = 'Time limit: ' + value.max_stay;
 						document.getElementById("remaining").innerHTML = 'Time remaining: ' + value.remaining;
 						document.getElementById("restricted").innerHTML = value.restricted;

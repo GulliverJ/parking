@@ -50,7 +50,7 @@
 					<div class="col1">
 						<p>Duration</p>
 					</div>
-					<div class="col1">
+					<div class="col2">
 						<p id="duration"></p>
 					</div>
 				</div>
@@ -58,7 +58,7 @@
 					<div class="col1">
 						<p>Maximum Stay</p>
 					</div>
-					<div class="col1">
+					<div class="col2">
 						<p id="max_stay"></p>
 					</div>
 				</div>
