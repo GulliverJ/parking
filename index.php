@@ -34,7 +34,7 @@
 		<div class="results">
 			<div class="resultshead">
 				<div class="resultsbox" style="width: 100px">
-					<p class="menulabel">Bay ID:</p>
+					<p class="menulabel">Bay ID: <span id="sensorid"></span></p>
 					<h4 class="menuitem" id="sensorid"></h4>
 				</div>
 				<div class="resultsbox" style="width: 216px">
