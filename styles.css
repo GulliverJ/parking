@@ -17,12 +17,9 @@
 .results {
   display: block;
   width: 400px;
-  height: calc(100vh - 168px);
-  overflow-y: auto;
-  overflow-x: none;
-  border-top-style: solid;
-  border-top-color: #ddd;
-  border-top-width: 1px;
+  height: calc(100vh - 94px);
+  overflow-x: auto;
+  overflow-y: none;
 }
 
 #map {

@@ -29,15 +29,15 @@
 	<div class="sidebar">
 		<div class="header">
 			<a href="http://victokoh.cs.ucl.ac.uk"><img src="img/main-button.png" class="returnlink"></a>
-			<img src="img/parking_title.png" style="display: inline; margin-left: 88px;">
+			<img src="img/parking_title.png" style="display: inline; margin-left: 56px;">
 		</div>
 		<div class="results">
 			<div class="resultshead">
-				<div class="resultsbox" style="width: 140px">
+				<div class="resultsbox" style="width: 136px">
 					<p.idlabel>Bay ID:</p><br>
 					<h4.idlabel id="sensorid"></h4>
 				</div>
-				<div class="resultsbox" style="width: 220px">
+				<div class="resultsbox" style="width: 216px">
 					<p.idlabel>Status:</p><br>
 					<h4.idLabel id="occupied"></h4>
 				</div>
