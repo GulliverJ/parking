@@ -11,6 +11,17 @@
 
 .header {
   height: 64px;
-  background-color: #1b1b1b;
+  background-color: #fff;
   color: #f60;
+}
+
+.sensorslogo {
+  margin-top: 8px;
+  margin-left: 8px;
+  margin-right: 8px;
+  opacity: 0.5;
+}
+
+.sensorslogo:hover {
+  opacity: 1;
 }
