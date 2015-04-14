@@ -4,8 +4,7 @@
 
   ini_set('display_errors','On');
   error_reporting(E_ALL);
-
-  $id = $_GET['id'];
+  $id = isset( $_GET['id'] ) ? $_GET['id'] : "10";
   $query = 'SELECT occupied, state_time, time_remaining, legally_occupied, restricted, max_stay, nearest_unoccupied_bay FROM bay_data_view WHERE bay_id = {$id}';
   $result = mysql_query($query);
   echo '[';

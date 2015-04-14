@@ -22,11 +22,12 @@ function makeMap(div) {
 			infoWindows[id] = infoWindow;
 			google.maps.event.addListener(marker, 'click', function() {
 				infoWindow.open(map, marker);
+				console.log(id);
 				$.getJSON('dataloader.php', id, function(data) {
 					$.each(data, function(key, value) {
 						console.log(data);
 						console.log(value);
-						
+
 						document.getElementByID("occupied").innerHTML = 'Occupied: ' + value.occupied;
 						document.getElementByID("duration").innerHTML = 'For: ' + value.duration;
 						document.getElementByID("remaining").innerHTML = 'Time remaining: ' + value.remaining;
