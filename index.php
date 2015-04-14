@@ -29,7 +29,6 @@
 		<a href="http://victokoh.cs.ucl.ac.uk/sensors"><img src="img/sensors_logo.png" class="sensorslogo"></a>
 		<div class="divide">
 		</div>
-		<img src="img/parking_logo.png" class="parkinglogo">
 	</div>
 	<div id="map">
 	</div>
