@@ -11,12 +11,13 @@
 
 .header {
   height: 64px;
+  width: calc(100vw - 64px);
   display: inline;
   float: left;
   background-color: #fff;
   color: #f60;
   border-bottom-style: solid;
-  border-bottom-color: #ccc;
+  border-bottom-color: #c7c7c7;
   border-bottom-width: 1px;
 }
 
