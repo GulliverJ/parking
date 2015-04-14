@@ -6,7 +6,8 @@
 
 .sidebar {
   display: inline;
-  float: left;
+  float: right;
+  position: fixed;
   width: 400px;
   height: calc(100vh - 64px);
   border-left-style: solid;
