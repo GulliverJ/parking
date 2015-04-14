@@ -76,6 +76,8 @@ p.apitext {
   font-size: 10pt;
   display: block;
   padding-top: 6px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 a.apitext {
@@ -87,7 +89,7 @@ a.apitext:link {
 }
 
 a.apitext:hover {
-  color: #1b1b1b;
+  color: #eee;
 }
 
 .parkinglogo {
@@ -115,15 +117,14 @@ a.apitext:hover {
 .mainsearch {
   display:block;
   margin: auto;
-  margin-top: 15px;
+  margin-top: 20px;
   width: 340px;
   height: 20px;
   border-style: solid;
   border-color: #ddd;
   border-radius: 4px;
   border-width: 1px;
-  margin-top: 7px;
   padding: 6px;
   color: #333;
-  font-size: 14pt;
+  font-size: 12pt;
 }
