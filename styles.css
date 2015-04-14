@@ -132,6 +132,11 @@ h4.idlabel {
   display: inline;
 }
 
+.resultsmain {
+  display: block;
+  width: 400px;
+}
+
 .footer {
   width: 400px;
   height: 30px;

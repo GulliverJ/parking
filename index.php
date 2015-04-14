@@ -35,26 +35,27 @@
 			<p>Two checkboxes here - filter by 'available' or filter by 'illegal' (todo)</p>
 		</div>
 		<div class="results">
-			<p>Side note if you're passing through and curious - this section is essentially a more qualitative description of the sensor's data. Having a tile pop up on the map to show the basic is great (definitely worth keeping - this menu panel may be hidden on phones and replaced with just the map), but I worry it might be unreasonable to show every piece of information on it - plus it'd be easier to demonstrate the project to people this way. The aesthetics of this box are the last bit I need to do - have run out to finish my passport stuff and get some food beforehand.</p>
 			<div class="resultshead">
 				<div class="resultsid">
-					<p.idlabel>Bay ID:</p>
+					<p.idlabel>Bay ID:</p><br>
 					<h4.idlabel id="sensorid"></h4>
 				</div>
 				<div class="resultsstatus">
-					<p.idlabel>Status:</p>
+					<p.idlabel>Status:</p><br>
 					<h4.idLabel id="occupied"></h4>
 				</div>
 			</div>
-			<p id="occupied"></p>
-			<p id="duration"></p>
-			<p id="max_stay"></p>
-			<p id="remaining"></p>
-			<p id="restricted"></p>
-			<p id="legal"></p>
-			<p id="nearest_available"></p>
-			<p id="restrictions"></p>
-			<p id="charge"></p>
+			<div class="resultsmain">
+				<p id="occupied"></p>
+				<p id="duration"></p>
+				<p id="max_stay"></p>
+				<p id="remaining"></p>
+				<p id="restricted"></p>
+				<p id="legal"></p>
+				<p id="nearest_available"></p>
+				<p id="restrictions"></p>
+				<p id="charge"></p>
+			</div>
 		</div>
 		<div class="footer">
 			<p class="apitext">Built with the <a href="http://students.cs.ucl.ac.uk/2014/group10" class="apitext">Orange Labs Sensors API</a></p>
