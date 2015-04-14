@@ -12,6 +12,7 @@
   border-left-style: solid;
   border-left-color: #c7c7c7;
   border-left-width: 1px;
+  background-color: #f00;
   right: 0;
 }
 
@@ -19,6 +20,7 @@
   display: inline;
   float: left;
   left: 0;
+  bottom: 0;
 	width: calc(100vw - 400px);
 	height: calc(100vh - 64px);
 }
@@ -52,6 +54,9 @@
 .returnlink {
   display: inline;
   float: left;
+  top: 0;
+  left: 0;
+  position: fixed;
   opacity: 0.7;
   border-bottom-color: #c85406;
   border-bottom-style: solid;
