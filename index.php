@@ -38,11 +38,14 @@
 			<p>Side note if you're passing through and curious - this section is essentially a more qualitative description of the sensor's data. Having a tile pop up on the map to show the basic is great (definitely worth keeping - this menu panel may be hidden on phones and replaced with just the map), but I worry it might be unreasonable to show every piece of information on it - plus it'd be easier to demonstrate the project to people this way. The aesthetics of this box are the last bit I need to do - have run out to finish my passport stuff and get some food beforehand.</p>
 			<div class="resultshead">
 				<div class="resultsid">
+					<p.idlabel>Bay ID:</p>
+					<h4.idlabel id="sensorid"></h4>
 				</div>
 				<div class="resultsstatus">
+					<p.idlabel>Status:</p>
+					<h4.idLabel id="occupied"></h4>
 				</div>
 			</div>
-			<p id="sensorid"></p>
 			<p id="occupied"></p>
 			<p id="duration"></p>
 			<p id="max_stay"></p>
