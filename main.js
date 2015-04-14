@@ -12,7 +12,8 @@ function makeMap(div) {
 			var marker = new google.maps.Marker({
 				position: new google.maps.LatLng(lat, lng),
 				map: map,
-				icon: 'http://maps.google.com/mapfiles/ms/icons/' + colour + '-dot.png',
+				//icon: 'http://maps.google.com/mapfiles/ms/icons/' + colour + '-dot.png',
+				icon: 'img/testicon.png',
 				title: ''
 			});
 			var infoWindow = new google.maps.InfoWindow({
