@@ -39,7 +39,13 @@
 	</div>
 	<div class="sidebar">
 		<p id="sensorid"></p>
-		<p id="timeremaining"></p>
+		<p id="occupied"></p>
+		<p id="duration"></p>
+		<p id="remaining"></p>
+		<p id="legal"></p>
+		<p id="restricted"></p>
+		<p id="max_stay"></p>
+		<p id="nearest_unoccupied"></p>
 	</div>
 	<script>
 		var map = makeMap(document.getElementById('map'));		
@@ -56,11 +62,6 @@
 				});
 			});
 		}, 1000);
-	</script>
-	<script>
-
-	
-
 	</script>
 </body>
 </html>

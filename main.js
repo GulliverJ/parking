@@ -23,6 +23,19 @@ function makeMap(div) {
 			google.maps.event.addListener(marker, 'click', function() {
 				infoWindow.open(map, marker);
 				document.getElementById("sensorid").innerHTML = 'Sensor ID: ' + id + infoWindows[id].getContent();
+				$.getJSON('dataloader.php', id, function(data) {
+					$.each(data, function(key, value) {
+						document.getElementByID("occupied").innerHTML = 'Occupied: ' + value.occupied;
+						document.getElementByID("duration").innerHTML = 'For: ' + value.duration;
+						document.getElementByID("remaining").innerHTML = 'Time remaining: ' + value.remaining;
+						document.getElementByID("legal").innerHTML = 'Legally parked: ' + value.legal;
+						document.getElementByID("restricted").innerHTML = 'Restricted: ' + value.restricted;
+						document.getElementByID("max_stay").innerHTML = 'Maximum stay: ' + value.max_stay;
+						document.getElementByID("nearest_unoccupied").innerHTML = 'Nearest unoccupied bay: ' + value.nearest_unoccupied;
+
+					});
+				});
+				// Ideally want to initiate code to get the values and display them. right?
 			});
 			return marker;
 		},
