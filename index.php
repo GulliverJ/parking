@@ -33,16 +33,15 @@
 		</div>
 		<div class="results">
 			<div class="resultshead">
-				<div class="resultsbox" style="width: 136px">
-					<p.idlabel>Bay ID:</p><br>
-					<h4.idlabel id="sensorid"></h4>
+				<div class="resultsbox" style="width: 100px">
+					<p class="menulabel">Bay ID:</p><br>
+					<h4 class="menuitem" id="sensorid"></h4>
 				</div>
 				<div class="resultsbox" style="width: 216px">
-					<p.idlabel>Status:</p><br>
-					<h4.idLabel id="occupied"></h4>
+					<p class="menulabel">Status:</p><br>
+					<h4 class="menuitem" id="occupied"></h4>
 				</div>
-				<div class="resultsbox" style="width: 40px">
-					<p.idlabel>Icon:</p><br>
+				<div class="resultsbox" style="width: 60px">
 					<img id="icon">
 				</div>
 			</div>
