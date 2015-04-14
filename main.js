@@ -25,6 +25,7 @@ function makeMap(div) {
 					$.each(data, function(key, value) {
 						console.log(id);
 						console.log(value.occupied);
+						console.log(value.restricted);
 						//document.getElementById("occupied").innerHTML = 'Occupied: ' + value.occupied;
 						//document.getElementById("duration").innerHTML = 'For: ' + value.duration;
 						//document.getElementByID("remaining").innerHTML = 'Time remaining: ' + value.remaining;
