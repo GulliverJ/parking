@@ -13,7 +13,7 @@
   height: 64px;
   right: 0;
   top: 0;
-  
+  position: fixed;
   display: inline;
   width: calc(100vw - 64px);
   float: left;
