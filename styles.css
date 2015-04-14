@@ -35,7 +35,7 @@
   display: inline;
   float: left;
   opacity: 0.7;
-  border-bottom-color: #f60;
+  border-bottom-color: #c85406;
   border-bottom-style: solid;
   border-bottom-width: 1px;
 }
@@ -72,7 +72,10 @@
   height: 36px;
   border-style: solid;
   border-color: #ddd;
-  border-radius: 2px;
+  border-radius: 4px;
+  border-width: 1px;
+  margin-top: 7px;
   padding: 6px;
   color: #333;
+  font-size: 16pt;
 }
