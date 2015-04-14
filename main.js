@@ -50,6 +50,9 @@ function makeMap(div) {
 			var layer = (type == 'occ') ? 1 : 2;
 			markers[id].setZIndex(layer);
 			infoWindows[id].setContent(content);
+		},
+		findNearest: function(id) {
+			map.panTo(markers[id].getPosition())
 		}
 
 	};
