@@ -5,15 +5,13 @@
 }
 
 #map {
-	width: 100%;
 	height: calc(100vh - 70px);
 }
 
 .header {
-  overflow: hidden;
   height: 64px;
   display: inline;
-  width: calc(100vw - 64px);
+  right: 0;
   float: left;
   background-color: #fff;
   color: #f60;
