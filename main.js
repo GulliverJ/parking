@@ -37,8 +37,12 @@ function makeMap(div) {
 					});
 				});
 				infoWindow.open(map, marker);
-			// Ideally want to initiate code to get the values and display them. right?
 			});
+
+			document.getElementById("findnearest").addEventListener("click", function(){
+   			map.panTo(markers[value.nearest_available]).getPosition());
+			});
+
 			return marker;
 		},
 		updateMarker: function(id, type, content) {
