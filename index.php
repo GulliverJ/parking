@@ -44,11 +44,8 @@
 		} 
 		?>
 		setInterval(function() {
-			console.log('here...');
 			$.getJSON('json.php', function(data) {
-				console.log(data);
 				$.each(data, function(key, value) {
-					console.log(value);
 					map.updateMarker(value.id, (value.occupied ? 'red' : 'green'), '<p>Id: ' + value.id + '</p><p>Occupied ' + value.occupied + '</p>');
 				});
 			});
