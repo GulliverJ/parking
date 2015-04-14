@@ -1,4 +1,30 @@
 <?php
+  $server_name = "localhost";
+  $db_name = "orangeparking";
+  $db_username = "parking";
+  $db_password = "parking";  
+
+  try {
+    $connection = new PDO( "mysql:host=$server_name;dbname=$db_name", $db_username, $db_password );
+    $connection->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
+    
+    $id = isset( $_GET['id'] ) ? $_GET['id'] : "10"; // Application field isn't required
+
+    // Retrieve the current max sensor_id belonging to this user
+    $sql_statement = $connection->prepare('SELECT occupied, restricted FROM bay_data_view WHERE bay_id = {$id}');
+    $sql_statement->execute();
+
+    $results = $sql_statement->fetchAll();
+    
+    echo '[';
+    foreach($results as $row) {
+      echo '{';
+      echo '"occupied": ' . ($row[0] ? 'true' : 'false') . ',';
+      echo '"restricted": "' . $row[1] . '"';
+      echo '}';
+    }
+    echo ']';
+/*
   require 'connect.php';
   header('Content-Type: application/json');
   $id = 10;
