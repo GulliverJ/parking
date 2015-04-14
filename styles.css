@@ -13,7 +13,6 @@
   border-left-style: solid;
   border-left-color: #c7c7c7;
   border-left-width: 1px;
-  background-color: #f00;
   right: 0;
   bottom: 0;
 }
@@ -21,20 +20,19 @@
 #map {
   display: inline;
   float: left;
-  margin-top: 64px;
+  margin-top: 65px;
   position: fixed;
   left: 0;
   bottom: 0;
 	width: calc(100vw - 400px);
-	height: calc(100vh - 64px);
+	height: calc(100vh - 65px);
 }
 
 .topbar {
   width: 100%;
   top: 0;
-  height: 64px;
+  height: 65px;
   position: fixed;
-  background-color:#0f0;
 }
 
 .header {
