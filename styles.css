@@ -116,28 +116,26 @@ h4.menuitem {
   padding-left: 7px;
   padding-right: 7px;
   border-bottom-style: dashed;
-  border-bottom-color: #eee;
+  border-bottom-color: #cdcdcd;
   border-bottom-width: 1px;
   display: block;
 }
 
 .col1 {
-  width:200px;
+  width:193px;
   font-weight: bold;
-  font-size: 12px;
+  font-size: 16px;
   display: inline;
   float:left;
-  background-color: #ff0;
 
 }
 
 .col2 {
-  width: 186px;
+  width: 193px;
   font-weight: lighter;
-  font-size: 12px;
+  font-size: 14px;
   display: inline;
   float: left;
-    background-color: #f0f;
 }
 
 .footer {

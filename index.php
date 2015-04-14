@@ -62,8 +62,14 @@
 						<p id="max_stay"></p>
 					</div>
 				</div>
-				<p id="occupied"></p>
-				<p id="max_stay"></p>
+				<div class="resultsrow">
+					<div class="col1">
+						<p>Time Remaining</p>
+					</div>
+					<div class="col2">
+						<p id="max_stay"></p>
+					</div>
+				</div>
 				<p id="remaining"></p>
 				<p id="restricted"></p>
 				<p id="legal"></p>
