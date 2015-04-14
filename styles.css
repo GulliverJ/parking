@@ -11,23 +11,25 @@
 
 .header {
   height: 64px;
+  display: inline;
   background-color: #fff;
   color: #f60;
   border-bottom-style: solid;
-  border-bottom-color: #eee;
+  border-bottom-color: #ddd;
   border-bottom-width: 1px;
 }
 
 .divide {
-  width: 1px;
+  width: 2px;
   height: 50px;
-  margin: 7px;
+  margin: 6px;
   border-left-style: solid;
   border-left-width: 1px;
   border-left-color: #ffc59e;
 }
 
 .returnlink {
+  display: inline;
   float: left;
   opacity: 0.7;
 }
