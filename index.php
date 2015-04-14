@@ -70,12 +70,47 @@
 						<p id="max_stay"></p>
 					</div>
 				</div>
-				<p id="remaining"></p>
-				<p id="restricted"></p>
-				<p id="legal"></p>
-				<p id="nearest_available"></p>
-				<p id="restrictions"></p>
-				<p id="charge"></p>
+				<div class="resultsrow">
+					<div class="col1">
+						<p>Restricted?</p>
+					</div>
+					<div class="col2">
+						<p id="restricted"></p>
+					</div>
+				</div>
+				<div class="resultsrow">
+					<div class="col1">
+						<p>Legally Occupied</p>
+					</div>
+					<div class="col2">
+						<p id="legal"></p>
+					</div>
+				</div>
+				<div class="resultsrow">
+					<div class="col1">
+						<p>Nearest Available Bay</p>
+					</div>
+					<div class="col2">
+						<p id="nearest_available"></p>
+						<button>Show on the map</button>
+					</div>
+				</div>
+				<div class="resultsrow">
+					<div class="col1">
+						<p>Restrictions</p>
+					</div>
+					<div class="col2">
+						<p id="restrictions"></p>
+					</div>
+				</div>
+				<div class="resultsrow">
+					<div class="col1">
+						<p>Hourly Charge</p>
+					</div>
+					<div class="col2">
+						<p id="charge"></p>
+					</div>
+				</div>
 			</div>
 		</div>
 		<div class="footer">

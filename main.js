@@ -26,15 +26,14 @@ function makeMap(div) {
 					$.each(data, function(key, value) {
 						document.getElementById("sensorid").innerHTML = id;
 						document.getElementById("occupied").innerHTML = value.occupied;
-						document.getElementById("duration").innerHTML = parseInt(value.duration/3600) + " hours, " + parseInt((value.duration/60)%3600) + " mins, " + value.duration%60 + " seconds";
-						console.log(max_stay);
-						document.getElementById("max_stay").innerHTML = parseInt(value.max_stay/3600) + " hours, " + parseInt((value.max_stay/60)%3600) + " mins, " + value.max_stay%60 + " seconds";
+						document.getElementById("duration").innerHTML = parseInt(value.duration/3600) + " hours, " + parseInt((value.duration/60)%60) + " mins, " + value.duration%60 + " seconds";
+						document.getElementById("max_stay").innerHTML = parseInt(value.max_stay/3600) + " hours, " + parseInt((value.max_stay/60)%60) + " mins";
 						document.getElementById("remaining").innerHTML = value.remaining;
 						document.getElementById("restricted").innerHTML = value.restricted;
-						document.getElementById("legal").innerHTML = 'Legally parked: ' + value.legal;
-						document.getElementById("nearest_available").innerHTML = 'Nearest available bay: ' + value.nearest_available;
-						document.getElementById("restrictions").innerHTML = 'Restrictions between ' + value.rest_start + ' and ' + value.rest_end;
-						document.getElementById("charge").innerHTML = 'Hourly charge: £' + value.charge;
+						document.getElementById("legal").innerHTML = value.legal;
+						document.getElementById("nearest_available").innerHTML = value.nearest_available;
+						document.getElementById("restrictions").innerHTML = 'Enforced between ' + value.rest_start + ' and ' + value.rest_end;
+						document.getElementById("charge").innerHTML = value.charge;
 					});
 				});
 				infoWindow.open(map, marker);
