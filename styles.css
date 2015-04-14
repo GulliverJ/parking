@@ -21,6 +21,7 @@
 #map {
   display: inline;
   float: left;
+  margin-top: 64px;
   position: fixed;
   left: 0;
   bottom: 0;
