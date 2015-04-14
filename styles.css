@@ -11,7 +11,7 @@
 
 .header {
   height: 64px;
-  width: calc(100vw - 64px);
+  width: calc(100vw - 65px);
   display: inline;
   float: left;
   background-color: #fff;
