@@ -31,7 +31,7 @@
 		</div>
 		<img src="img/parking_logo.png" class="parkinglogo">
 		<img src="img/parking_title.png" style="display: inline; float:left; margin-right: 8px">
-		<p style="display: inline; float: right">Built with the <a href="http://students.cs.ucl.ac.uk/2014/group10" style="color: #f60">Orange Labs Sensors API</a></p>
+		<p class="apitext">Built with the <a href="http://students.cs.ucl.ac.uk/2014/group10" class="apitext">Orange Labs Sensors API</a></p>
 	</div>
 	<div id="map">
 	</div>

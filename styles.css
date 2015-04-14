@@ -57,6 +57,26 @@
   opacity: 0.5;
 }
 
+p.apitext {
+  color: #1b1b1b;
+  float: right;
+  margin-top: 40px;
+  font-size: 12pt;
+  display: inline;
+}
+
+a.apitext {
+  color: #f60;
+}
+
+a.apitext:link {
+  text-decoration: none;
+}
+
+a.apitext:hover {
+  color: #1b1b1b;
+}
+
 .sensorslogo:hover {
   opacity: 1;
 }
