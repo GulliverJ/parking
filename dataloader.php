@@ -8,6 +8,10 @@
     $connection = new PDO( "mysql:host=$server_name;dbname=$db_name", $db_username, $db_password );
     $connection->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
     
+      } catch(Exception $e) {
+    die(var_dump($e));
+  }
+
     $id = isset( $_GET['id'] ) ? $_GET['id'] : "10"; // Application field isn't required
 
     // Retrieve the current max sensor_id belonging to this user
@@ -24,6 +28,8 @@
       echo '}';
     }
     echo ']';
+
+
 /*
   require 'connect.php';
   header('Content-Type: application/json');
