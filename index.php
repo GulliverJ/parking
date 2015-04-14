@@ -35,6 +35,8 @@
 	</div>
 	<div id="map">
 	</div>
+	<div class="sidebar">
+	</div>
 	<script>
 		var map = makeMap(document.getElementById('map'));		
 		<?php
