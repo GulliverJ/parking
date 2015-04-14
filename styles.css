@@ -9,12 +9,20 @@
   float: left;
   position: fixed;
   width: 400px;
-  height: calc(100vh - 64px);
+  height: 100%;
   border-left-style: solid;
   border-left-color: #c7c7c7;
   border-left-width: 1px;
   left: 0;
   bottom: 0;
+}
+
+.results {
+  display: block;
+  width: 400px;
+  border-top-style: solid;
+  border-top-color: #ddd;
+  border-top-width: 1px;
 }
 
 #map {
@@ -25,7 +33,7 @@
   right: 0;
   bottom: 0;
 	width: calc(100vw - 400px);
-	height: calc(100vh - 65px);
+	height: 100%;
 }
 
 .topbar {
@@ -37,10 +45,10 @@
 
 .header {
   height: 64px;
-  right: 0;
+  left: 0;
   top: 0;
-  display: inline;
-  width: calc(100% - 64px);
+  display: block;
+  width: 400px
   float: left;
   background-color: #fff;
   color: #f60;
@@ -88,11 +96,9 @@
 
 p.apitext {
   color: #1b1b1b;
-  float: right;
-  margin-top: 40px;
-  padding-right: 8px;
+  float: left;
   font-size: 10pt;
-  display: inline;
+  display: block;
 }
 
 a.apitext {
