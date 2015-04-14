@@ -17,11 +17,11 @@
       }
       $initial = false;
       echo '{';
-      echo '"occupied": ' . ({$row[0] ? 'Yes' : 'No') . ',';
+      echo '"occupied": ' . ($row[0] ? 'Yes' : 'No') . ',';
       echo '"duration": {$row[1]},';
       echo '"remaining": {$row[2]},';
-      echo '"legal": ' . ({$row[3] ? 'Yes' : 'No'} . ',';
-      echo '"restricted": ' . ({$row[4] ? 'Yes' : 'No'} . ',';
+      echo '"legal": ' . ($row[3] ? 'Yes' : 'No'} . ',';
+      echo '"restricted": ' . ($row[4] ? 'Yes' : 'No'} . ',';
       echo '"max_stay": {$row[5]},';
       echo '"nearest_unoccupied": {$row[6]}';
       echo '}';
