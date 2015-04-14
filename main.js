@@ -25,7 +25,7 @@ function makeMap(div) {
 				console.log(id);
 					
 					$.getJSON('dataloader.php', function(data) {
-						$.each(result[0], function(key, value) {
+						$.each(data, function(key, value) {
 							console.log(value.occupied);
 
 							document.getElementByID("occupied").innerHTML = 'Occupied: ' + value.occupied;
