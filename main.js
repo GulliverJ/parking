@@ -21,11 +21,7 @@ function makeMap(div) {
 			markers[id] = marker;
 			infoWindows[id] = infoWindow;
 			google.maps.event.addListener(marker, 'click', function() {
-				console.log(id);
-				
-				(function() {
 				$.getJSON('dataloader.php', function(data) {
-					console.log(id);
 					$.each(data, function(key, value) {
 						console.log(id);
 						console.log(value.occupied);
@@ -39,7 +35,6 @@ function makeMap(div) {
 
 					});
 				});
-				})();
 				infoWindow.open(map, marker);
 			// Ideally want to initiate code to get the values and display them. right?
 			});
