@@ -46,8 +46,8 @@ function makeMap(div) {
 		},
 		updateMarker: function(id, type, content) {
 			markers[id].setIcon('img/bayicon-' + type + '.png');
-			$layer = (type == 'occ') ? 1 : 2;
-			markers[id].setzIndex($layer);
+			var layer = (type == 'occ') ? 1 : 2;
+			markers[id].setzIndex(layer);
 			infoWindows[id].setContent(content);
 		}
 
