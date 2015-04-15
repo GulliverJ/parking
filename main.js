@@ -26,7 +26,7 @@ function makeMap(div) {
 						document.getElementById("occupied").innerHTML = (value.occupied == 'Occupied') ? value.occupied : '<span style="color: #0b1">' + value.occupied + '</span>';
 						var durationTime = parseTime(value.duration);
 						document.getElementById("duration").innerHTML = (durationTime.hours ? durationTime.hours + ' hours ' : '')
-																													+ (durationTime.mins ? durationTime.mins + ' mins' : '')
+																													+ (durationTime.mins ? durationTime.mins + ' mins ' : '')
 																													+ (durationTime.secs ? durationTime.secs + ' secs': '');
 						document.getElementById("max_stay").innerHTML = parseInt(value.max_stay/3600) + " hours, " + parseInt((value.max_stay/60)%60) + " mins";
 						document.getElementById("remaining").innerHTML = value.remaining;
