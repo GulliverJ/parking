@@ -30,9 +30,8 @@ function makeMap(div) {
 						document.getElementById("restricted").innerHTML = value.restricted;
 						document.getElementById("legal").innerHTML = value.legal;
 						document.getElementById("nearest_available").innerHTML = value.nearest_available;
-						console.log(value.rest_start);
 						document.getElementById("restrictions").innerHTML = 'Enforced between ' + value['rest_start'] + ' and ' + value['rest_end'];
-						document.getElementById("charge").innerHTML = value.charge;
+						document.getElementById("charge").innerHTML = value['charge'];
 						map.panTo(markers[value.nearest_available].getPosition());
 					});
 				});
