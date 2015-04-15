@@ -45,8 +45,10 @@ function makeMap(div) {
 				infowindow.setContent(info[id]);
 				infowindow.open(map, marker);
 			});
+			function findNearest() {
+				map.panTo(markers[value.nearest].getPosition());	
+			}
 			
-			//document.getElementById("findnearest").addEventListener("click", map.panTo(markers[value.nearest].getPosition()));
 			
 			return marker;
 		},

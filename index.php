@@ -91,7 +91,7 @@
 						<p>Nearest Available Bay</p>
 					</div>
 					<div class="col2">
-						<button id="findnearest">Show on the map</button>
+						<button id="findnearest" onclick=map.makeMap.addMarker.findNearest()>Show on the map</button>
 					</div>
 				</div>
 				<div class="resultsrow">
