@@ -14,7 +14,8 @@ function makeMap(div) {
 				position: new google.maps.LatLng(lat, lng),
 				map: map,
 				zIndex: 1,
-				icon: 'img/bayicon-' + type + '.png'
+				icon: 'img/bayicon-' + type + '.png',
+				animation: google.maps.Animation.DROP
 			});
 
 			markers[id] = marker;
