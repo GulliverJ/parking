@@ -91,7 +91,7 @@
 						<p>Nearest Available Bay</p>
 					</div>
 					<div class="col2">
-						<button id="findnearest" onclick=map.makeMap.addMarker.findNearest()>Show on the map</button>
+						<button id="findnearest">Show on the map</button>
 					</div>
 				</div>
 				<div class="resultsrow">
@@ -137,6 +137,7 @@
 			echo "map.addMarker({$bay['id']}, {$bay['lat']}, {$bay['lng']}, '$type', '<p>Loading...</p>');";
 		} 
 		?>
+
 		setInterval(function() {
 			$.getJSON('json.php', function(data) {
 				$.each(data, function(key, value) {
