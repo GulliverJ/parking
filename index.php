@@ -91,7 +91,7 @@
 						<p>Nearest Available Bay</p>
 					</div>
 					<div class="col2">
-						<button>Show on the map</button>
+						<button id="findnearest">Show on the map</button>
 					</div>
 				</div>
 				<div class="resultsrow">

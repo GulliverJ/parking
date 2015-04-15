@@ -40,13 +40,14 @@ function makeMap(div) {
 						//document.getElementById("nearest_available").innerHTML = value.nearest;
 						document.getElementById("restrictions").innerHTML = (value.rstart ? 'Between ' + value.rstart.substring(0, 5) + ' and ' + value.rend.substring(0, 5) : '-');
 						document.getElementById("charge").innerHTML = value.charge;
-						map.panTo(markers[value.nearest].getPosition());
 					});
 				});
 				infowindow.setContent(info[id]);
 				infowindow.open(map, marker);
 			});
-
+			
+			document.getElementById("findnearest").addEventListener("click", map.panTo(markers[value.nearest].getPosition()));
+			
 			return marker;
 		},
 		updateMarker: function(id, type, content) {
