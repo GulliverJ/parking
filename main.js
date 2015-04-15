@@ -24,16 +24,21 @@ function makeMap(div) {
 					$.each(data, function(key, value) {
 						document.getElementById("sensorid").innerHTML = id;
 						document.getElementById("occupied").innerHTML = (value.occupied == 'Occupied') ? value.occupied : '<span style="color: #0b1">' + value.occupied + '</span>';
-						var durationTime = parseTime(value.duration);
-						document.getElementById("duration").innerHTML = (durationTime.hours ? durationTime.hours + ' hours ' : '')
-																													+ (durationTime.mins ? durationTime.mins + ' mins ' : '')
-																													+ (durationTime.secs ? durationTime.secs + ' secs': '');
-						document.getElementById("max_stay").innerHTML = parseInt(value.max_stay/3600) + " hours, " + parseInt((value.max_stay/60)%60) + " mins";
-						document.getElementById("remaining").innerHTML = value.remaining;
+						var getTime = parseTime(value.duration);
+						document.getElementById("duration").innerHTML = (getTime.hours ? getTime.hours + ' hours ' : '')
+																													+ (getTime.mins ? getTime.mins + ' mins ' : '')
+																													+ (getTime.secs ? getTime.secs + ' secs': '');
+						getTime = parseTime(value.max_stay);
+						document.getElementById("max_stay").innerHTML = (getTime.hours ? getTime.hours + ' hours ' : '')
+																													+ (getTime.mins ? getTime.mins + ' mins' : '')
+						getTime = parseTime(value.remaining);
+						document.getElementById("remaining").innerHTML = (getTime.hours ? getTime.hours + ' hours ' : '')
+																													 + (getTime.mins ? getTime.mins + ' mins ' : '')
+																												   + (getTime.secs ? getTime.secs + ' secs': '');
 						document.getElementById("restricted").innerHTML = value.restricted;
 						document.getElementById("legal").innerHTML = value.legal;
 						//document.getElementById("nearest_available").innerHTML = value.nearest;
-						document.getElementById("restrictions").innerHTML = 'Enforced between ' + value.rstart + ' and ' + value.rend;
+						document.getElementById("restrictions").innerHTML = (value.rstart ? 'Between ' + value.rstart.substring(0, 6) + ' and ' + value.rendsubstring(0, 6) : '-';
 						document.getElementById("charge").innerHTML = value.charge;
 						map.panTo(markers[value.nearest_available].getPosition());
 					});
