@@ -39,7 +39,7 @@
 				</div>
 				<div class="resultsbox" style="width: 216px">
 					<p class="menulabel">Status:</p>
-					<h4 class="menuitem" id="occupied"></h4>
+					<h4 class="menuitem" id="occupied"><i style="font-size: 14px">Click a bay to see its data</i></h4>
 				</div>
 				<div class="resultsbox" style="width: 60px">
 					<img id="icon">

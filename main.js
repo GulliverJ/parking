@@ -23,7 +23,7 @@ function makeMap(div) {
 				$.getJSON('dataloader.php?id=' + id, function(data) {
 					$.each(data, function(key, value) {
 						document.getElementById("sensorid").innerHTML = id;
-						document.getElementById("occupied").innerHTML = value.occupied;
+						document.getElementById("occupied").innerHTML = (value.occupied == 'Occupied') ? value.occupied : '<span style="color: #ob1>' + value.occupied + '</span>';
 						document.getElementById("duration").innerHTML = parseInt(value.duration/3600) + " hours, " + parseInt((value.duration/60)%60) + " mins, " + value.duration%60 + " seconds";
 						document.getElementById("max_stay").innerHTML = parseInt(value.max_stay/3600) + " hours, " + parseInt((value.max_stay/60)%60) + " mins";
 						document.getElementById("remaining").innerHTML = value.remaining;

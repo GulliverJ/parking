@@ -95,11 +95,11 @@ p.menulabel {
 }
 
 h4.menuitem {
-  font-size: 20px;
+  font-size: 24px;
   color: #444;
   margin-top: 4px;
   margin-left: 12px;
-  line-height: 20px;
+  line-height: 24px;
 }
 
 .resultsmain {
