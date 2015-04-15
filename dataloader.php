@@ -27,7 +27,7 @@
       echo '"max_stay": "' . $row[3] . '",';
       echo '"restricted": "' . ($row[4] ? 'Restrictions in place' : 'No - Free parking') . '",';
       echo '"legal": "' . ((!$row[5] && $row[0] == 'Available') ? 'No' : 'Yes') . '",';
-      echo '"nearest_available": "' . $row[6] . '",';
+      echo '"nearest": "' . ($row[6] ? $row[6] : '-') . '",';
       echo '"rstart": "' . $row[7] . '",';
       echo '"rend": "' . $row[8] . '",';
       echo '"charge": "' . $row[9] . '"';
