@@ -53,11 +53,9 @@ function makeMap(div) {
 }
 
 function parseTime(secs) {
-	var tempHour;
-	var tempMin;
 	var sec = secs % 60;
-	var min = parseInt(tempMin / 60) % 60;
-	var hour = parseInt(tempHour / 3600);
+	var min = parseInt(secs / 60) % 60;
+	var hour = parseInt(secs / 3600);
 	var time = {
 		hours: hour,
 		mins: min,
