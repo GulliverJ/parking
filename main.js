@@ -38,6 +38,7 @@ function makeMap(div) {
 				});
 				document.getElementById("findnearest").onclick = function() {
 					map.panTo(markers[value.nearest].getPosition());
+					markers[value.nearest].setAnimation(google.maps.Animation.BOUNCE);
 				};
 				infowindow.setContent(info[id]);
 				infowindow.open(map, marker);
