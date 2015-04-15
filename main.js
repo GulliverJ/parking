@@ -15,7 +15,7 @@ function makeMap(div) {
 				map: map,
 				zIndex: 1,
 				icon: 'img/bayicon-' + type + '.png',
-				animation: google.maps.Animation.DROP
+				animation: null
 			});
 
 			markers[id] = marker;
