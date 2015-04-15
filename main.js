@@ -25,8 +25,8 @@ function makeMap(div) {
 						document.getElementById("sensorid").innerHTML = id;
 						document.getElementById("occupied").innerHTML = (value.occupied == 'Occupied') ? value.occupied : '<span style="color: #0b1">' + value.occupied + '</span>';
 						document.getElementById("duration").innerHTML = parseTime(value.duration);
-						document.getElementById("max_stay").innerHTML = parseTime(value.max_stay);
-						document.getElementById("remaining").innerHTML = parseTime(value.remaining);
+						document.getElementById("max_stay").innerHTML = (parseTime(value.max_stay) ? parseTime(value.max_stay) : '-');
+						document.getElementById("remaining").innerHTML = (parseTime(value.remaining) ? parseTime(value.remaining) : '-');
 						document.getElementById("restricted").innerHTML = value.restricted;
 						document.getElementById("legal").innerHTML = value.legal;
 						document.getElementById("restrictions").innerHTML = (value.rstart ? 'Between ' + value.rstart.substring(0, 5) + ' and ' + value.rend.substring(0, 5) : '-');
