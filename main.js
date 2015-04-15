@@ -1,7 +1,7 @@
 function makeMap(div) {
 	var markers = [];
 	var info = [];
-	infoWindow = new google.maps.InfoWindow();
+	infowindow = new google.maps.InfoWindow();
 	var mapOptions = {
 		disableDefaultUI: false,
 		zoom: 17,

@@ -120,7 +120,7 @@
 	</div>
 
 	<script>
-		var infowindow;		
+		var infowindow;	
 		var map = makeMap(document.getElementById('map'));
 		<?php
 		foreach ($bays as $bay) {
