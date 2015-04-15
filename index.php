@@ -127,12 +127,12 @@
 
 			if($bay['occupied']) {
 				if($bay['legal']) {
-					$type = 'occ';
+					$type = 'occ2';
 				} else {
 					$type = 'illegal';
 				}
 			} else {
-				$type = 'avail';
+				$type = 'avail2';
 			}
 			echo "map.addMarker({$bay['id']}, {$bay['lat']}, {$bay['lng']}, '$type', '<p>Loading...</p>');";
 		} 
@@ -140,7 +140,7 @@
 		setInterval(function() {
 			$.getJSON('json.php', function(data) {
 				$.each(data, function(key, value) {
-					map.updateMarker(value.id, (value.occupied ? 'occ' : 'avail'),
+					map.updateMarker(value.id, (value.occupied ? 'occ2' : 'avail2'),
 						'<p>Id: ' + value.id + '</p>' +
 						'<p>Occupied: ' + value.occupied + '</p>' + 
 						'<p>Nearest Available Bay:' + value['nearest-unoccupied-bay'] + '</p>' + 
