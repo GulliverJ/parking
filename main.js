@@ -38,7 +38,7 @@ function makeMap(div) {
 						document.getElementById("restricted").innerHTML = value.restricted;
 						document.getElementById("legal").innerHTML = value.legal;
 						//document.getElementById("nearest_available").innerHTML = value.nearest;
-						document.getElementById("restrictions").innerHTML = (value.rstart ? 'Between ' + value.rstart.substring(0, 6) + ' and ' + value.rendsubstring(0, 6) : '-');
+						document.getElementById("restrictions").innerHTML = (value.rstart ? 'Between ' + value.rstart.substring(0, 6) + ' and ' + value.rend.substring(0, 6) : '-');
 						document.getElementById("charge").innerHTML = value.charge;
 						map.panTo(markers[value.nearest_available].getPosition());
 					});
