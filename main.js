@@ -25,7 +25,7 @@ function makeMap(div) {
 						document.getElementById("sensorid").innerHTML = id;
 						document.getElementById("occupied").innerHTML = (value.occupied == 'Occupied') ? value.occupied : '<span style="color: #0b1">' + value.occupied + '</span>';
 						var durationTime = parseTime(value.duration);
-						document.getElementById("duration").innerHTML = durationTime.hours + ' hours ' + durationTime.mins + ' mins ' + durationTime.secs + 'secs';
+						document.getElementById("duration").innerHTML = durationTime.hours + ' hours ' + durationTime.mins + ' mins ' + durationTime.secs + ' secs';
 						document.getElementById("max_stay").innerHTML = parseInt(value.max_stay/3600) + " hours, " + parseInt((value.max_stay/60)%60) + " mins";
 						document.getElementById("remaining").innerHTML = value.remaining;
 						document.getElementById("restricted").innerHTML = value.restricted;
@@ -55,14 +55,13 @@ function makeMap(div) {
 function parseTime(secs) {
 	var tempHour;
 	var tempMin;
-	var tempSec;
-	tempSec = secs%60;
-	tempMin = parseInt((tempMin / 60)) % 60;
-	tempHour = parseInt(tempHour / 3600);
+	var sec = secs % 60;
+	var min = parseInt(tempMin / 60) % 60;
+	var hour = parseInt(tempHour / 3600);
 	var time = {
-		hours: tempHour,
-		mins: tempMin,
-		secs: tempSec
+		hours: hour,
+		mins: min,
+		secs: sec
 	};
 	return time;
 }
