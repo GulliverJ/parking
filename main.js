@@ -68,10 +68,16 @@ function parseTime(secs) {
 	var sec = secs % 60;
 	var min = parseInt(secs / 60) % 60;
 	var hour = parseInt(secs / 3600);
-	var time = {
-		hours: hour,
-		mins: min,
-		secs: sec
-	};
-	return time;
+	var result = '';
+	var none = 0;
+	if(hour > 0) {
+		result += hour + (hour == 1 ? ' hour ' : ' hours ');
+	} else { none++; }
+	if(min > 0) {
+		result += min + (min == 1 ? ' min ' : ' mins ');
+	} else { none++; }
+	if(min > 0)
+		result += sec + (sec == 1 ? ' sec ' : ' secs ');
+	} else { none++; }
+	return (none > 0 ? result : '');
 }
