@@ -22,8 +22,8 @@
     foreach($results as $row) {
       echo '{';
       echo '"occupied": "' . ($row[0] ? 'Occupied' : 'Available') . '",';
-      echo '"duration": "' . $row[9] . '",';
-      echo '"remaining": "' . $row[7] . '",';
+      echo '"duration": "' . $row[1] . '",';
+      echo '"remaining": "' . $row[2] . '",';
       echo '"max_stay": "' . $row[3] . '",';
       echo '"restricted": "' . ($row[4] ? 'Restrictions in place' : 'No - Free parking') . '",';
       echo '"legal": "' . (!$row[5] ? 'No' : 'Yes') . '",';
