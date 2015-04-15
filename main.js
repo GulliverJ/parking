@@ -1,6 +1,7 @@
 function makeMap(div) {
 	var markers = [];
-	var infoWindows = [];
+	var info = [];
+	infoWindow = new google.maps.InfoWindow();
 	var mapOptions = {
 		disableDefaultUI: false,
 		zoom: 17,
@@ -15,12 +16,9 @@ function makeMap(div) {
 				zIndex: 1,
 				icon: 'img/bayicon-' + type + '.png'
 			});
-			var infoWindow = new google.maps.InfoWindow({
-				content: content
-			});
 
 			markers[id] = marker;
-			infoWindows[id] = infoWindow;
+			info[id] = content;
 			google.maps.event.addListener(marker, 'click', function() {
 				$.getJSON('dataloader.php?id=' + id, function(data) {
 					$.each(data, function(key, value) {
@@ -37,7 +35,8 @@ function makeMap(div) {
 						map.panTo(markers[value.nearest_available].getPosition());
 					});
 				});
-				infoWindow.open(map, marker);
+				infowindow.setContent(info[id]);
+				infowindow.open(map, marker);
 			});
 
 			return marker;
@@ -46,7 +45,7 @@ function makeMap(div) {
 			markers[id].setIcon('img/bayicon-' + type + '.png');
 			var layer = (type == 'occ') ? 1 : 2;
 			markers[id].setZIndex(layer);
-			infoWindows[id].setContent(content);
+			info[id] = content;
 		}
 
 	};
