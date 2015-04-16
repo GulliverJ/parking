@@ -17,7 +17,8 @@
 			echo '"nearest-unoccupied-bay": ' . $row[2] . ',';
 			echo '"max-stay": "' . $row[3] . '",';
 			echo '"start": "' . $row[4] . '",';
-			echo '"end": "' . $row[5] . '"';
+			echo '"end": "' . $row[5] . '",';
+			echo '"legal: "' . $row[6] . '"';
 			echo '}';
 		}
 	}

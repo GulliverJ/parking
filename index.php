@@ -123,6 +123,7 @@
 	<script>
 		var infowindow;	
 		var map = makeMap(document.getElementById('map'));
+		var stateType;
 		<?php
 		foreach ($bays as $bay) {
 
@@ -142,7 +143,17 @@
 		setInterval(function() {
 			$.getJSON('json.php', function(data) {
 				$.each(data, function(key, value) {
-					map.updateMarker(value.id, (value.occupied ? 'occ2' : 'avail2'),
+					var stateType;
+					if(value.occupied) {
+						if(value.legal == 1 || value.legal == 'NULL') {
+							stateType = 'occ2';
+						} else {
+							stateType = 'illegal';
+						}
+					} else {
+						stateType = 'avail2';
+					}
+					map.updateMarker(value.id, stateType,
 						'<p>Id: ' + value.id + '</p>' +
 						'<p>Occupied: ' + value.occupied + '</p>' + 
 						'<p>Nearest Available Bay:' + value['nearest-unoccupied-bay'] + '</p>' + 
@@ -151,7 +162,7 @@
 						'<p>End ' + value.end + '</p>');
 				});
 			});
-		}, 1000);
+		}, 5000);
 	</script>
 </body>
 </html>
