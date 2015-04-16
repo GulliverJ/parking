@@ -144,7 +144,7 @@
 		setInterval(function() {
 			nextDate = new Date();
 			$.getJSON('getnew.php?time=' + tempDate.getTime(), function(data) {
-				tempDate = nextDate();
+				tempDate = nextDate;
 				$.each(data, function(key, value) {
 					if(value.occupied) {
 						if(value.legal == '1' || value.legal == 'NULL') {
