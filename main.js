@@ -29,7 +29,7 @@ function makeMap(div) {
 						document.getElementById("max_stay").innerHTML = (parseTime(value.max_stay) ? parseTime(value.max_stay) : '-');
 						document.getElementById("remaining").innerHTML = (parseTime(value.remaining) ? parseTime(value.remaining) : '-');
 						document.getElementById("restricted").innerHTML = value.restricted;
-						document.getElementById("legal").innerHTML = (value.legal == 'NULL' || value.occupied = 'Available') ? '-' : (value.legal == 1 ? 'Yes' : 'No');
+						document.getElementById("legal").innerHTML = value.legal == 'NULL' || value.occupied = 'Available' ? '-' : value.legal == 1 ? 'Yes' : 'No';
 						document.getElementById("restrictions").innerHTML = (value.rstart ? 'Between ' + value.rstart.substring(0, 5) + ' and ' + value.rend.substring(0, 5) : '-');
 						document.getElementById("charge").innerHTML = value.charge;
 						document.getElementById("findnearest").onclick = function() {
