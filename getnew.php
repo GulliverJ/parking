@@ -1,6 +1,7 @@
 <?php
 
   ini_set("log_errors", 1);
+  ini_set('display_errors', 1);
 
   header('Content-Type: application/json');
   $server_name = "localhost";
