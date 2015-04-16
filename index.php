@@ -139,7 +139,7 @@
 			echo "map.addMarker({$bay['id']}, {$bay['lat']}, {$bay['lng']}, '$type', '<p>Loading...</p>');";
 		} 
 		?>
-		var tempDate = new Date();
+		var tempDate = new Date(2015, 04, 10);
 		var stateType;
 		setInterval(function() {
 			nextDate = new Date();
