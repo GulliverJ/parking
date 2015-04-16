@@ -139,9 +139,13 @@
 			echo "map.addMarker({$bay['id']}, {$bay['lat']}, {$bay['lng']}, '$type', '<p>Loading...</p>');";
 		} 
 		?>
+		var tempDate = new Date();
+		var nextDate;
 		var stateType;
 		setInterval(function() {
-			$.getJSON('json.php', function(data) {
+			nextDate = new Date();
+			$.getJSON('getnew.php?time=' + tempDate.getTime(), function(data) {
+				tempDate = nextDate;
 				$.each(data, function(key, value) {
 					
 					if(value.occupied) {
