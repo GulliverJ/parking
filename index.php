@@ -139,12 +139,12 @@
 			echo "map.addMarker({$bay['id']}, {$bay['lat']}, {$bay['lng']}, '$type', '<p>Loading...</p>');";
 		} 
 		?>
-		var tempDate = new Date(2015, 03, 09);
+		var tempDate = new Date(); //2015, 03, 09
 		var stateType;
 		setInterval(function() {
 			nextDate = new Date();
 			$.getJSON('getnew.php?time=' + tempDate.getTime(), function(data) {
-				tempDate = nextDate;
+				//tempDate = nextDate;
 				$.each(data, function(key, value) {
 					if(value.occupied) {
 						if(value.legal == '1' || value.legal == 'NULL') {
@@ -164,7 +164,7 @@
 						'<p>End ' + value.end + '</p>');
 				});
 			});
-		}, 3000);
+		}, 3000); 1429188013898
 	</script>
 </body>
 </html>
