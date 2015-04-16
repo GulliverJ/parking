@@ -19,7 +19,7 @@
     $testdate = "2015-04-16 00:00:00"; 
 
     $sql_statement = $connection->prepare("SELECT b.bay_id, v.occupied, nearest_unoccupied_bay, r.max_stay, start, end, legally_occupied, d.state_timespan FROM bay_data_view v INNER JOIN bays b ON v.bay_id = b.bay_id INNER JOIN restrictions r ON b.restriction_id = r.restriction_id INNER JOIN bay_data d ON d.bay_id = v.bay_id WHERE d.state_timespan > '?' ORDER BY v.bay_id asc");
-    $sql_statement->execute( array($tesdate));
+    $sql_statement->execute( array($testdate));
 
     $results = $sql_statement->fetchAll();
 
