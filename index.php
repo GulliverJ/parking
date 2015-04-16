@@ -24,6 +24,7 @@
 		<script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 		<script src="main.js"></script>
+		<link rel="icon" type="image/png" href="img/favicon.png">
 </head>
 <body>
 
