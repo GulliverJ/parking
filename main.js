@@ -1,6 +1,7 @@
 function makeMap(div) {
 	var markers = [];
 	var info = [];
+	var watching = 0;
 	infowindow = new google.maps.InfoWindow();
 	var mapOptions = {
 		disableDefaultUI: false,
@@ -21,6 +22,7 @@ function makeMap(div) {
 			markers[id] = marker;
 			info[id] = content;
 			google.maps.event.addListener(marker, 'click', function() {
+				watching = id;
 				$.getJSON('dataloader.php?id=' + id, function(data) {
 					$.each(data, function(key, value) {
 						document.getElementById("sensorid").innerHTML = id;
@@ -52,7 +54,9 @@ function makeMap(div) {
 			var layer = (type == 'occ2') ? 1 : (type == 'illegal') ? 3 : 2;
 			markers[id].setZIndex(layer);
 			info[id] = content;
-			//infowindow.setContent(content);
+			if(id == watching) {
+				infowindow.setContent(content);
+			}
 		}
 
 	};
