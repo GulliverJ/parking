@@ -26,7 +26,7 @@
     $count = 0;
     foreach($results as $row) {
       $count++;
-      $inclause += $row[0];
+      $inclause += '' . $row[0] . '';
       if($count < $numrows) {
         $inclause += ', ';
       }
