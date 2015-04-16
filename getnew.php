@@ -20,7 +20,7 @@
 
     $sql_statement = $connection->prepare("SELECT bay_id FROM bay_data WHERE state_timespan >= '?'");
     $sql_statement->execute( array($testdate) );
-    $results = $sqlstatement->fetchAll();
+    $results = $sql_statement->fetchAll();
     $numrows = count($results);
     $inclause = '(';
     $count = 0;
