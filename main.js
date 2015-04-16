@@ -21,7 +21,7 @@ function makeMap(div) {
 			markers[id] = marker;
 			info[id] = content;
 			google.maps.event.addListener(marker, 'click', function() {
-				updateDetails();
+				updateDetails(id);
 				infowindow.setContent(info[id]);
 				infowindow.open(map, marker);
 			});
