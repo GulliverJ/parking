@@ -31,7 +31,7 @@ function makeMap(div) {
 						document.getElementById("restricted").innerHTML = value.restricted;
 						document.getElementById("legal").innerHTML = value.legal;
 						document.getElementById("restrictions").innerHTML = (value.rstart ? 'Between ' + value.rstart.substring(0, 5) + ' and ' + value.rend.substring(0, 5) : '-');
-						document.getElementById("charge").innerHTML = value.charge;
+						document.getElementById("charge").innerHTML = '£' + value.charge;
 						document.getElementById("findnearest").onclick = function() {
 							map.panTo(markers[value.nearest].getPosition());
 							markers[value.nearest].setAnimation(google.maps.Animation.BOUNCE);
