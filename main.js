@@ -77,5 +77,5 @@ function parseTime(secs) {
 	if(sec > 0) {
 		result += sec + (sec == 1 ? ' sec ' : ' secs ');
 	} else { none++; }
-	return (none > 0 ? result : '');
+	return (none == 3 ? '-' : result);
 }
