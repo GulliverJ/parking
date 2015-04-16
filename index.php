@@ -129,12 +129,12 @@
 
 			if($bay['occupied']) {
 				if($bay['legal']) {
-					$type = 'occ2';
+					$type = 'occ';
 				} else {
 					$type = 'illegal';
 				}
 			} else {
-				$type = 'avail2';
+				$type = 'avail';
 			}
 			echo "map.addMarker({$bay['id']}, {$bay['lat']}, {$bay['lng']}, '$type', '<p>Loading...</p>');";
 		} 
@@ -142,16 +142,16 @@
 		var stateType;
 		setInterval(function() {
 			nextDate = new Date();
-			$.getJSON('json.php', function(data) {
+			$.getJSON('getnew.php', function(data) {
 				$.each(data, function(key, value) {
 					if(value.occupied) {
 						if(value.legal == '1' || value.legal == 'NULL') {
-							stateType = 'occ2';
+							stateType = 'occ';
 						} else {
 							stateType = 'illegal';
 						}
 					} else {
-						stateType = 'avail2';
+						stateType = 'avail';
 					}
 					map.updateMarker(value.id, stateType,
 						'<p>Id: ' + value.id + '</p>' +

@@ -51,7 +51,7 @@ function makeMap(div) {
 		},
 		updateMarker: function(id, type, content) {
 			markers[id].setIcon('img/bayicon-' + type + '.png');
-			var layer = (type == 'occ2') ? 1 : (type == 'illegal') ? 3 : 2;
+			var layer = (type == 'occ') ? 1 : (type == 'illegal') ? 3 : 2;
 			markers[id].setZIndex(layer);
 			info[id] = content;
 			if(id == watching) {
