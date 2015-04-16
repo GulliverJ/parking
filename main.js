@@ -14,8 +14,8 @@ function makeMap(div) {
 				position: new google.maps.LatLng(lat, lng),
 				map: map,
 				zIndex: 1,
-				icon: 'img/bayicon-' + type + '.png',
-				animation: null
+				animation: null,
+				icon: 'img/bayicon-' + type + '.png'
 			});
 
 			markers[id] = marker;
@@ -34,13 +34,10 @@ function makeMap(div) {
 						document.getElementById("charge").innerHTML = value.charge;
 						document.getElementById("findnearest").onclick = function() {
 							map.panTo(markers[value.nearest].getPosition());
+							markers[value.nearest].setAnimation(google.maps.Animation.BOUNCE);
 						};
 					});
 				});
-				document.getElementById("findnearest").onclick = function() {
-					map.panTo(markers[value.nearest].getPosition());
-					markers[value.nearest].setAnimation(google.maps.Animation.BOUNCE);
-				};
 				infowindow.setContent(info[id]);
 				infowindow.open(map, marker);
 			});
