@@ -35,9 +35,9 @@ function makeMap(div) {
 						document.getElementById("findnearest").onclick = function() {
 							map.panTo(markers[value.nearest].getPosition());
 							markers[value.nearest].setAnimation(google.maps.Animation.BOUNCE);
-							//setTimeout(function(){ 
-							//	markers[value.nearest].setAnimation(null); 
-							//}, 1400);
+							setTimeout(function(){ 
+								markers[value.nearest].setAnimation(null); 
+							}, 1400);
 						};
 					});
 				});
