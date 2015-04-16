@@ -136,7 +136,7 @@
 			} else {
 				$type = 'avail2';
 			}
-			//echo "map.addMarker({$bay['id']}, {$bay['lat']}, {$bay['lng']}, '$type', '<p>Loading...</p>');";
+			echo "map.addMarker({$bay['id']}, {$bay['lat']}, {$bay['lng']}, '$type', '<p>Loading...</p>');";
 		} 
 		?>
 		var stateType;
