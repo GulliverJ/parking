@@ -144,7 +144,7 @@
 			$.getJSON('json.php', function(data) {
 				$.each(data, function(key, value) {
 					
-					if(value.occupied == 'true') {
+					if(value.occupied) {
 						if(value.legal == '1' || value.legal == 'NULL') {
 							stateType = 'occ2';
 						} else {
@@ -162,7 +162,7 @@
 						'<p>End ' + value.end + '</p>');
 				});
 			});
-		}, 5000);
+		}, 3000);
 	</script>
 </body>
 </html>
