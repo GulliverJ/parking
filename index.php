@@ -143,7 +143,7 @@
 		var stateType;
 		setInterval(function() {
 			nextDate = new Date();
-			$.getJSON('getnew.php?time=' + tempDate, function(data) {
+			$.getJSON('getnew.php?time=' + tempDate.getTime(), function(data) {
 				tempDate = nextDate();
 				$.each(data, function(key, value) {
 					if(value.occupied) {
