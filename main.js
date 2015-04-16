@@ -21,7 +21,26 @@ function makeMap(div) {
 			markers[id] = marker;
 			info[id] = content;
 			google.maps.event.addListener(marker, 'click', function() {
-				$.getJSON('dataloader.php?id=' + id, function(data) {
+				updateDetails(id);
+				infowindow.setContent(info[id]);
+				infowindow.open(map, marker);
+			});
+			
+			return marker;
+		},
+		updateMarker: function(id, type, content) {
+			markers[id].setIcon('img/bayicon-' + type + '.png');
+			var layer = (type == 'occ2') ? 1 : (type == 'illegal') ? 3 : 2;
+			markers[id].setZIndex(layer);
+			info[id] = content;
+			updateDetails(id);
+		}
+
+	};
+}
+
+function updateDetails(id) {
+	$.getJSON('dataloader.php?id=' + id, function(data) {
 					$.each(data, function(key, value) {
 						document.getElementById("sensorid").innerHTML = id;
 						document.getElementById("occupied").innerHTML = (value.occupied == 'Occupied') ? value.occupied : '<span style="color: #0b1">' + value.occupied + '</span>';
@@ -41,20 +60,6 @@ function makeMap(div) {
 						};
 					});
 				});
-				infowindow.setContent(info[id]);
-				infowindow.open(map, marker);
-			});
-			
-			return marker;
-		},
-		updateMarker: function(id, type, content) {
-			markers[id].setIcon('img/bayicon-' + type + '.png');
-			var layer = (type == 'occ2') ? 1 : (type == 'illegal') ? 3 : 2;
-			markers[id].setZIndex(layer);
-			info[id] = content;
-		}
-
-	};
 }
 
 function parseTime(secs) {
