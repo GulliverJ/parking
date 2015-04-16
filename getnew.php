@@ -18,7 +18,7 @@
     //$lastcheck = mktime(date("s")-3, date("i"), date("H"), date("d"), date("m"), date("Y"));
     $testdate = "2015-04-16 12:15:00"; 
 
-    $sql_statement = $connection->prepare("SELECT bay_id FROM bay_data WHERE state_timespan >= '?'";
+    $sql_statement = $connection->prepare("SELECT bay_id FROM bay_data WHERE state_timespan >= '?'");
     $sql_statement->execute( array($testdate) );
     $results = $sqlstatement->fetchAll();
     $numrows = count($results);
