@@ -33,8 +33,10 @@
     }
     $inclause += ')';
 
+    $tester = '(1, 2, 3)';
+
     $sql_statement = $connection->prepare("SELECT b.bay_id, v.occupied, nearest_unoccupied_bay, r.max_stay, start, end, legally_occupied FROM bay_data_view v INNER JOIN bays b ON v.bay_id = b.bay_id INNER JOIN restrictions r ON b.restriction_id = r.restriction_id WHERE v.bay_id IN ? ORDER BY v.bay_id asc");
-    $sql_statement->execute( array($inclause) );
+    $sql_statement->execute( array($tester) );
 
     $results = $sql_statement->fetchAll();
     $numrows = count($results);
