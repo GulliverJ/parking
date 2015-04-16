@@ -52,7 +52,7 @@ function makeMap(div) {
 			var layer = (type == 'occ2') ? 1 : (type == 'illegal') ? 3 : 2;
 			markers[id].setZIndex(layer);
 			info[id] = content;
-			infowindow.setContent(content);
+			//infowindow.setContent(content);
 		}
 
 	};
