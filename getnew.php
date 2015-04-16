@@ -38,7 +38,7 @@
     echo '"legal": "' . $row[6] . '"';
     echo '}';
     if($results->rowCount() > $count) {
-      echo ', '
+      echo ', ';
     }
   }
   echo ']';
