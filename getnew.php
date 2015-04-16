@@ -13,10 +13,10 @@
     $connection = new PDO( "mysql:host=$server_name;dbname=$db_name", $db_username, $db_password );
     $connection->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
 
-    //$time = isset( $_GET['time'] ) ? $_GET['time'] : "2015-01-01 00:00:00";
-    //$newtime = date("Y-m-d H:i:s", $time);
+    $time = isset( $_GET['time'] ) ? $_GET['time'] : "2015-01-01 00:00:00";
+    $newtime = date("Y-m-d H:i:s", $time);
     //$lastcheck = mktime(date("s")-3, date("i"), date("H"), date("d"), date("m"), date("Y"));
-    $testdate = "2015-04-16 12:15:00"; 
+    //$testdate = "2015-04-16 12:15:00"; 
 /*
     $sql_statement = $connection->prepare("SELECT bay_id FROM bay_data WHERE state_timespan >= ?");
     $sql_statement->execute( array($testdate) );
@@ -36,7 +36,7 @@
     $tester = '(1, 2, 3)';
 */
     $sql_statement = $connection->prepare("SELECT b.bay_id, v.occupied, nearest_unoccupied_bay, r.max_stay, start, end, legally_occupied FROM bay_data_view v INNER JOIN bays b ON v.bay_id = b.bay_id INNER JOIN restrictions r ON b.restriction_id = r.restriction_id INNER JOIN bay_data d ON d.bay_id = v.bay_id WHERE d.state_timespan >= ? ORDER BY v.bay_id asc");
-    $sql_statement->execute( array($testdate) );
+    $sql_statement->execute( array($newtime) );
 
     $results = $sql_statement->fetchAll();
     $numrows = count($results);
