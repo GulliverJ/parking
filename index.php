@@ -19,6 +19,7 @@
 
 <html>
 	<head>
+		<meta charset="utc-8">
 		<link rel="stylesheet" href="styles.css">
 		<script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
