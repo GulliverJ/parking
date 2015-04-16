@@ -168,18 +168,3 @@ a.apitext:link {
 a.apitext:hover {
   color: #eee;
 }
-
-.mainsearch {
-  display:block;
-  margin: auto;
-  margin-top: 20px;
-  width: 340px;
-  height: 20px;
-  border-style: solid;
-  border-color: #ddd;
-  border-radius: 4px;
-  border-width: 1px;
-  padding: 6px;
-  color: #333;
-  font-size: 12pt;
-}
