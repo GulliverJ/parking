@@ -1,4 +1,8 @@
 <?php
+
+  ini_set("log_errors", 1);
+  ini_set("error_log", "/var/log/httpd/new-error.log");
+
   header('Content-Type: application/json');
   $server_name = "localhost";
   $db_name = "orangeparking";
@@ -10,7 +14,7 @@
     $connection->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
 
     $time = isset( $_GET['time'] ) ? $_GET['time'] : "2015-01-01 00:00:00";
-    $newtime = date("Y\-m\-d G\:i\:s", $time)
+    $newtime = date("Y\-m\-d G\:i\:s", $time);
 
     $sql_statement = $connection->prepare("SELECT b.bay_id, v.occupied, nearest_unoccupied_bay, r.max_stay, start, end, legally_occupied, d.state_timespan FROM bay_data_view v INNER JOIN bays b ON v.bay_id = b.bay_id INNER JOIN restrictions r ON b.restriction_id = r.restriction_id INNER JOIN bay_data d ON d.bay_id = v.bay_id WHERE d.state_timespan > '?' ORDER BY v.bay_id asc");
     $sql_statement->execute( array($newtime));
