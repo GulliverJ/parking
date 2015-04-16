@@ -139,13 +139,13 @@
 			echo "map.addMarker({$bay['id']}, {$bay['lat']}, {$bay['lng']}, '$type', '<p>Loading...</p>');";
 		} 
 		?>
-
+		var stateType;
 		setInterval(function() {
 			$.getJSON('json.php', function(data) {
 				$.each(data, function(key, value) {
-					var stateType;
-					if(value.occupied) {
-						if(value.legal == 1 || value.legal == 'NULL') {
+					
+					if(value.occupied == 'true') {
+						if(value.legal == '1' || value.legal == 'NULL') {
 							stateType = 'occ2';
 						} else {
 							stateType = 'illegal';
