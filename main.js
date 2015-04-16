@@ -21,7 +21,7 @@ function makeMap(div) {
 			markers[id] = marker;
 			info[id] = content;
 			google.maps.event.addListener(marker, 'click', function() {
-				updateDetails(id);
+				updateDetails();
 				infowindow.setContent(info[id]);
 				infowindow.open(map, marker);
 			});
@@ -33,13 +33,13 @@ function makeMap(div) {
 			var layer = (type == 'occ2') ? 1 : (type == 'illegal') ? 3 : 2;
 			markers[id].setZIndex(layer);
 			info[id] = content;
-			updateDetails(id);
 		}
 
 	};
 }
 
 function updateDetails(id) {
+	setInterval(function() {
 	$.getJSON('dataloader.php?id=' + id, function(data) {
 					$.each(data, function(key, value) {
 						document.getElementById("sensorid").innerHTML = id;
@@ -60,6 +60,7 @@ function updateDetails(id) {
 						};
 					});
 				});
+}, 3000);
 }
 
 function parseTime(secs) {
