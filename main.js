@@ -29,7 +29,7 @@ function makeMap(div) {
 						document.getElementById("occupied").innerHTML = (value.occupied == 'Occupied') ? (value.legal == 1 ? 'Occupied' : '<span style="color:#db1616">Occupied Illegally</span>') : '<span style="color: #0b1">' + value.occupied + '</span>';
 						document.getElementById("duration").innerHTML = parseTime(value.duration);
 						document.getElementById("max_stay").innerHTML = (parseTime(value.max_stay) ? parseTime(value.max_stay) : '-');
-						document.getElementById("remaining").innerHTML = value.remaining == '-' ? value.remaining : parseTime(value.remaining);
+						document.getElementById("remaining").innerHTML = (value.remaining == '-' || parseTime(value.max_stay) == '-') ? value.remaining : parseTime(value.remaining);
 						document.getElementById("restricted").innerHTML = value.restricted;
 						document.getElementById("legal").innerHTML = value.legal == 'NULL' || value.occupied == 'Available' ? '-' : value.legal == 1 ? 'Yes' : 'No';
 						document.getElementById("restrictions").innerHTML = (value.rstart ? 'Between ' + value.rstart.substring(0, 5) + ' and ' + value.rend.substring(0, 5) : '-');
