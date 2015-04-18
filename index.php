@@ -31,7 +31,7 @@
 	<div class="sidebar">
 		<div class="header">
 			<a href="http://victokoh.cs.ucl.ac.uk"><img src="img/main-button.png" class="returnlink"></a>
-			<img src="img/parking_title.png" style="display: inline; margin-left: 36px; position: fixed;">
+			<img src="img/parking_title.png" style="display: inline; margin-left: 32px; position: fixed;">
 		</div>
 		<div class="results">
 			<div class="resultshead">
