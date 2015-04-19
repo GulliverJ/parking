@@ -19,7 +19,7 @@
     $newtime = $init == 1 ? date("Y-m-d H:i:s", mktime(0, 0, 0, 4, 10, 2015)) : date("Y-m-d H:i:s", mktime(date("H"), date("i"), date("s")-4, date("m"), date("d"), date("Y")));
 
     // Statement will return the data for rows ONLY if they have updated since the last check
-    $sql_statement = $connection->prepare("SELECT b.bay_id, v.occupied, nearest_unoccupied_bay, r.max_stay, start, end, legally_occupied FROM bay_data_view v INNER JOIN bays b ON v.bay_id = b.bay_id INNER JOIN restrictions r ON b.restriction_id = r.restriction_id INNER JOIN bay_data d ON d.bay_id = v.bay_id WHERE d.state_timespan >= ? OR v.legally_occupied = 1 ORDER BY v.bay_id asc");
+    $sql_statement = $connection->prepare("SELECT b.bay_id, v.occupied, nearest_unoccupied_bay, r.max_stay, start, end, legally_occupied FROM bay_data_view v INNER JOIN bays b ON v.bay_id = b.bay_id INNER JOIN restrictions r ON b.restriction_id = r.restriction_id INNER JOIN bay_data d ON d.bay_id = v.bay_id WHERE d.state_timespan >= ? OR v.legally_occupied = 0 ORDER BY v.bay_id asc");
     $sql_statement->execute( array($newtime) );
 
     $results = $sql_statement->fetchAll();
