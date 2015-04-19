@@ -155,6 +155,7 @@
 					} else {
 						stateType = 'avail2';
 					}
+					console.log(stateType);
 					map.updateMarker(value.id, stateType,
 						'<p>Id: ' + value.id + '</p>' +
 						'<p>Occupied: ' + value.occupied + '</p>' + 
