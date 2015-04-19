@@ -130,12 +130,12 @@
 
 			if($bay['occupied']) {
 				if($bay['legal']) {
-					$type = 'occ';
+					$type = 'occ2';
 				} else {
 					$type = 'illegal';
 				}
 			} else {
-				$type = 'avail';
+				$type = 'avail2';
 			}
 			echo "map.addMarker({$bay['id']}, {$bay['lat']}, {$bay['lng']}, '$type', '<p>Loading...</p>');";
 		} 
@@ -147,13 +147,13 @@
 				initial = 0;
 				$.each(data, function(key, value) {
 					if(value.occupied) {
-						if(value.legal) {
-							stateType = 'occ';
-						} else {
+						if(value.legal == 0) {
 							stateType = 'illegal';
+						} else {
+							stateType = 'occ2';
 						}
 					} else {
-						stateType = 'avail';
+						stateType = 'avail2';
 					}
 					map.updateMarker(value.id, stateType,
 						'<p>Id: ' + value.id + '</p>' +
