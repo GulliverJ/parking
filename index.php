@@ -155,7 +155,7 @@
 						if (value.legal == '0') {
 							stateType = 'illegal';
 						}
-
+					}
 					map.updateMarker(value.id, stateType,
 						'<p>Id: ' + value.id + '</p>' +
 						'<p>Occupied: ' + value.occupied + '</p>' + 
