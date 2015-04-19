@@ -150,11 +150,12 @@
 						if(value.legal == '1' || value.legal == 'NULL') {
 							stateType = 'occ';
 						} else {
+							stateType = 'avail';
+						}
+						if (value.legal == '0') {
 							stateType = 'illegal';
 						}
-					} else {
-						stateType = 'avail';
-					}
+
 					map.updateMarker(value.id, stateType,
 						'<p>Id: ' + value.id + '</p>' +
 						'<p>Occupied: ' + value.occupied + '</p>' + 
