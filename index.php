@@ -147,8 +147,7 @@
 				initial = 0;
 				$.each(data, function(key, value) {
 					if(value.occupied) {
-						console.log(value.legal);
-						if(value.legal == '1' || value.legal == 'NULL') {
+						if(value.legal) {
 							stateType = 'occ';
 						} else {
 							stateType = 'illegal';
