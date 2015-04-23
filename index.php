@@ -163,7 +163,7 @@
 					map.updateMarker(value.id, stateType,
 						'<p>Id: ' + value.id + '</p>' +
 						'<p>Occupied: ' + value.occupied + '</p>' + 
-						(value['max-stay'] ? '<p>Max Stay: ' + value['max-stay'] + '</p>' : '')
+						(value['max-stay'] ? '<p>Max Stay: ' + value['max-stay'] + '</p>' : ''));
 				});
 				initial = 0;
 			});
