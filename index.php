@@ -15,6 +15,7 @@
 		}
 	}
 ?>
+
 <!DOCTYPE html>
 
 <html>
@@ -144,11 +145,14 @@
 		var stateType;
 		setInterval(function() {
 			$.getJSON('getnew.php?initial=' + initial, function(data) {
-				initial = 0;
 				$.each(data, function(key, value) {
 					if(value.occupied) {
 						if(value.legal == 0) {
 							stateType = 'illegal';
+							if(initial == 1) {
+								notifyIllegal();
+								initial = 0;
+							}
 						} else {
 							stateType = 'occ';
 						}
@@ -159,13 +163,25 @@
 					map.updateMarker(value.id, stateType,
 						'<p>Id: ' + value.id + '</p>' +
 						'<p>Occupied: ' + value.occupied + '</p>' + 
-						'<p>Nearest Available Bay:' + value['nearest-unoccupied-bay'] + '</p>' + 
-						(value['max-stay'] ? '<p>Max Stay: ' + value['max-stay'] + '</p>' : '') + 
-						'<p>Start ' + value.start + '</p>' + 
-						'<p>End ' + value.end + '</p>');
+						(value['max-stay'] ? '<p>Max Stay: ' + value['max-stay'] + '</p>' : '');
 				});
+				initial = 0;
 			});
 		}, 3000);
 	</script>
 </body>
 </html>
+
+<?php
+
+	function notifyIllegal() {
+		// The message
+		$message = "Notice:\r\nYour vehicle is currently illegally parked.\r\n";
+
+		// In case any of our lines are larger than 70 characters, we should use wordwrap()
+		$message = wordwrap($message, 70, "\r\n");
+
+		// Send
+		mail('gully.johnson@gmail.com', 'Warning from Orange Parking', $message);
+	}
+?>
