@@ -151,7 +151,14 @@
 							stateType = 'illegal';
 							if(initial == 1) {
 								<?php
-								notifyIllegal();
+									// The message
+									$message = "Notice:\r\nYour vehicle is currently illegally parked.\r\n";
+
+									// In case any of our lines are larger than 70 characters, we should use wordwrap()
+									$message = wordwrap($message, 70, "\r\n");
+
+									// Send
+									mail('gully.johnson@gmail.com', 'Warning from Orange Parking', $message);
 								?>
 								initial = 0;
 							}
