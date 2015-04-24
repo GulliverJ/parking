@@ -150,7 +150,9 @@
 						if(value.legal == 0) {
 							stateType = 'illegal';
 							if(initial == 1) {
+								<?php
 								notifyIllegal();
+								?>
 								initial = 0;
 							}
 						} else {
