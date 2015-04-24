@@ -116,7 +116,7 @@
 			</div>
 		</div>
 		<div class="footer">
-			<p class="apitext">Built with the <a href="http://students.cs.ucl.ac.uk/2014/group10" class="apitext">Orange Labs Sensors API</a></p>
+			<p class="apitext">Built with the <a href="http://victokoh.cs.ucl.ac.uk/sensors/api.php" class="apitext">Orange Labs Sensors API</a></p>
 		</div>
 	</div>
 	<div id="map">
