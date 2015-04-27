@@ -5,8 +5,8 @@ function makeMap(div) {
 	infowindow = new google.maps.InfoWindow();
 	var mapOptions = {
 		disableDefaultUI: false,
-		zoom: 18,
-		center: new google.maps.LatLng(51.494400, -0.273445)
+		zoom: 17,
+		center: new google.maps.LatLng(51.524471, -0.132114)
 	};
 	var map = new google.maps.Map(div, mapOptions); 
 	return {
